@@ -1,4 +1,4 @@
-//Pattern like a curtain
+/***Pattern like a curtain
 i/p:number
 o/p: 
 ********
@@ -9,6 +9,8 @@ o/p:
 **    **
 ***  ***
 ********
+
+**/
 
 #include <iostream>
 using namespace std;
