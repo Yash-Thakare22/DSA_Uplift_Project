@@ -1,12 +1,13 @@
 //printing a pattern in slanting
 //i/p:5
 //o/p:
+/*
         * * * * *
       * * * * * 
     * * * * * 
   * * * * *
 * * * * *
-
+*/
 
 #include <iostream>
 using namespace std;
