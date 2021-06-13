@@ -1,4 +1,4 @@
-/*Question 1. Rhombus pattern
+/*Question 1. Rhombus pattern solution in c++
              *  *  *  *  *
           *  *  *  *  *
        *  *  *  *  *
