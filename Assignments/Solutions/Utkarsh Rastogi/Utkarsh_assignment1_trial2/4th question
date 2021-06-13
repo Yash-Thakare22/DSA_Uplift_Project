@@ -1,0 +1,26 @@
+n=int(input('enter the no of rows'))
+for i in range(n):
+    for j in range(n,i,-1):
+        print(j,end='')
+    print('\n')        
+    
+    
+    
+
+ '''   utkarsh@pop-os:~/Documents/utkarsh stuff/vs python$ /usr/bin/python3 "/home/utkarsh/Documents/utkarsh stuff/vs python/pyhton folder/classwork/classwork1/homework/pattern4.py"
+enter the no of rows5
+54321
+
+5432
+
+543
+
+54
+
+5
+
+utkarsh@pop-os:~/Documents/utkarsh stuff/vs python$ 
+
+
+
+'''

@@ -1,0 +1,43 @@
+# here n is the number of rows for one triangle user have to give the value of 2n/2
+
+n=int(input('Enter the no of rows'))
+m=n
+for i in range(1,n+1):#for(i=1;i<=n;i++)
+    for j in range(1,2*n):#for(j=1;j<=2*n-1;j++)
+        if j>=n-(i-1) and j<=n+(i-1):
+            print('*',end='')
+        else:
+            print(' ',end='') 
+    print(end='\n') 
+
+    #making 1 straight triange and then printing inverted triengle
+for i in range(m,0,-1):#for(i=1;i<=n;i++)
+    for j in range(2*m-1,0,-1):#for(j=1;j<=2*n-1;j++)
+            if j>=m-(i-1) and j<=m+(i-1):
+        
+                print('*',end='')
+            else:
+                print(' ',end='') 
+    print(end='\n')    
+    
+    
+    
+
+
+    '''utkarsh@pop-os:~/Documents/utkarsh stuff/vs python$ /usr/bin/python3 "/home/utkarsh/Documents/utkarsh stuff/vs python/pyhton folder/classwork/classwork1/homework/pattern3.py"
+Enter the no of rows5
+    *    
+   ***   
+  *****  
+ ******* 
+*********
+*********
+ ******* 
+  *****  
+   ***   
+    *    
+utkarsh@pop-os:~/Documents/utkarsh stuff/vs python$ 
+
+
+
+'''
