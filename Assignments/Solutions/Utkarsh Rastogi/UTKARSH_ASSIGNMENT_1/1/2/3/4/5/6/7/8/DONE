@@ -1,0 +1,215 @@
+n=int(input('enter the rows'))
+for i in range(n-1,-1,-1):
+    for j in range(i):
+        print(' ',end='')# end ='' prevents to go new line everytime 
+    for k in range(n):
+        print('*',end='') 
+    print('\n')       
+    
+'''utkarsh@pop-os:~/Documents/utkarsh stuff/vs python$ /usr/bin/python3 "/home/utkarsh/Documents/utkarsh stuff/vs python/pyhton folder/classwork/classwork1/homework/pattern1.py"
+enter the rows5
+    *****
+
+   *****
+
+  *****
+
+ *****
+
+*****
+
+utkarsh@pop-os:~/Documents/utkarsh stuff/vs python$ 
+
+
+'''
+
+
+n=int(input('enter the no of rows'))
+m=1
+for i in range(n):
+    for j in range(i+1):
+        print(m,end=' ')
+        m=m+1
+    print('\n')            
+
+'''utkarsh@pop-os:~/Documents/utkarsh stuff/vs python$ /usr/bin/python3 "/home/utkarsh/Documents/utkarsh stuff/vs python/pyhton folder/classwork/classwork1/homework/pattern2.py"
+enter the no of rows5
+1 
+
+2 3 
+
+4 5 6 
+
+7 8 9 10 
+
+11 12 13 14 15 
+
+utkarsh@pop-os:~/Documents/utkarsh stuff/vs python$ 
+
+
+
+'''
+
+
+# here n is the number of rows for one triangle user have to give the value of 2n/2
+
+n=int(input('Enter the no of rows'))
+m=n
+for i in range(1,n+1):#for(i=1;i<=n;i++)
+    for j in range(1,2*n):#for(j=1;j<=2*n-1;j++)
+        if j>=n-(i-1) and j<=n+(i-1):
+            print('*',end='')
+        else:
+            print(' ',end='') 
+    print(end='\n') 
+
+    #making 1 straight triange and then printing inverted triengle
+for i in range(m,0,-1):#for(i=1;i<=n;i++)
+    for j in range(2*m-1,0,-1):#for(j=1;j<=2*n-1;j++)
+            if j>=m-(i-1) and j<=m+(i-1):
+        
+                print('*',end='')
+            else:
+                print(' ',end='') 
+    print(end='\n')                     
+
+
+    '''utkarsh@pop-os:~/Documents/utkarsh stuff/vs python$ /usr/bin/python3 "/home/utkarsh/Documents/utkarsh stuff/vs python/pyhton folder/classwork/classwork1/homework/pattern3.py"
+Enter the no of rows5
+    *    
+   ***   
+  *****  
+ ******* 
+*********
+*********
+ ******* 
+  *****  
+   ***   
+    *    
+utkarsh@pop-os:~/Documents/utkarsh stuff/vs python$ 
+
+
+
+'''
+
+
+n=int(input('enter the no of rows'))
+for i in range(n):
+    for j in range(n,i,-1):
+        print(j,end='')
+    print('\n')        
+
+ '''   utkarsh@pop-os:~/Documents/utkarsh stuff/vs python$ /usr/bin/python3 "/home/utkarsh/Documents/utkarsh stuff/vs python/pyhton folder/classwork/classwork1/homework/pattern4.py"
+enter the no of rows5
+54321
+
+5432
+
+543
+
+54
+
+5
+
+utkarsh@pop-os:~/Documents/utkarsh stuff/vs python$ 
+
+
+
+'''
+
+
+n = int(input('enter the number of rows of blank triangle'))
+m = n
+for i in range(1, n+1):
+    for j in range(1, 2*n):
+        if j >= n-(i-1) and j <= n+(i-1):
+            print(' ', end='')# same concept as triangle just interchange the spaces
+        else:
+            print('*', end='')
+    print(end='\n')
+for i in range(m, 0, -1):
+    for j in range(2*m-1, 0, -1):
+        if j >= m-(i-1) and j <= m+(i-1):
+            print(' ', end='')
+        else:
+            print('*', end='')
+    print(end='\n')
+
+'''utkarsh@pop-os:~/Documents/utkarsh stuff/vs python$ /usr/bin/python3 "/home/utkarsh/Documents/utkarsh stuff/vs python/pyhton folder/classwork/classwork1/homework/pattern5.py"
+enter the number of rows of blank triangle5
+**** ****
+***   ***
+**     **
+*       *
+         
+         
+*       *
+**     **
+***   ***
+**** ****
+utkarsh@pop-os:~/Documents/utkarsh stuff/vs python$ 
+
+
+
+'''
+
+
+
+m=int(input('enter the no of rows'))
+for i in range(m,0,-1):#for(i=1;i<=n;i++)
+    for j in range(2*m-1,0,-1):#for(j=1;j<=2*n-1;j++)
+            if j>=m-(i-1) and j<=m+(i-1):
+        
+                print('*',end='')
+            else:
+                print(' ',end='') 
+    print(end='\n')                     
+
+   ''' utkarsh@pop-os:~/Documents/utkarsh stuff/vs python$ /usr/bin/python3 "/home/utkarsh/Documents/utkarsh stuff/vs python/pyhton folder/classwork/classwork1/homework/pattern6.py"
+enter the no of rows5
+*********
+ ******* 
+  *****  
+   ***   
+    *    
+utkarsh@pop-os:~/Documents/utkarsh stuff/vs python$ 
+
+
+
+
+
+
+
+
+'''
+
+
+
+m=int(input('enter the no of rows'))
+for i in range(m,0,-1):#for(i=1;i<=n;i++)
+    for j in range(2*m-1,0,-1):#for(j=1;j<=2*n-1;j++)
+            if j>=m-(i-1) and j<=m+(i-1):
+        
+                print(' ',end='')
+            else:
+                print('*',end='') 
+    print(end='\n')                     
+
+ '''   utkarsh@pop-os:~/Documents/utkarsh stuff/vs python$ /usr/bin/python3 "/home/utkarsh/Documents/utkarsh stuff/vs python/pyhton folder/classwork/classwork1/homework/pattern7.py"
+enter the no of rows5
+         
+*       *
+**     **
+***   ***
+**** ****
+utkarsh@pop-os:~/Documents/utkarsh stuff/vs python$ 
+
+
+
+
+
+
+
+
+'''
+
