@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+int main()
+{ cout<<"Enter array size"<<endl;
+int n,i,j,index;
+int arr[100];
+cin>>n;
+cout<<"Enter unsorted array"<<endl;
+for(i=0;i<n;i++)
+{ cin>>arr[i];}
+index=-1;
+for(i=0; i<n; i++)
+	{
+		for(j=i+1; j<n; j++)
+		{
+			if(arr[i]==arr[j])
+			{
+				index=j;
+				break;
+			}				
+		}
+		
+		if(index!= -1)
+			break;
+	}
+	if(index!=-1)
+		cout<<arr[j];
+	else
+		cout<<"There is no repeated element";
+}
