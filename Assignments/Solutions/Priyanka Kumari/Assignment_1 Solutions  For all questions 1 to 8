@@ -1,0 +1,208 @@
+/*Question 1. Rhombus pattern
+             *  *  *  *  *
+          *  *  *  *  *
+       *  *  *  *  *
+    *  *  *  *  *
+ *  *  *  *  *            */
+ //CODE:
+ #include<iostream>
+ using namespace std;
+ int main()
+ {
+     int i,j,k;
+     for(i=1;i<=5;i++)
+     {
+         for(j=i;j<5;j++)
+         {
+             cout<<" ";
+         }
+         for(k=1;k<=5;k++)
+         {
+             printf("*");
+         }
+         printf("\n");
+     }
+ }
+ 
+
+/* Question 2. Hollow Diamond
+
+* * * * *  * * * * *
+* * * *      * * * *
+* * *          * * *
+* *              * *
+*                  *
+*                  *
+* *              * *
+* * *          * * *
+* * * *      * * * *
+* * * * *  * * * * *         */
+
+//Code
+#include<iostream>
+using namespace std;
+void hollowDiamond(int n)
+{
+    int i,j;
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<2*n;j++)
+        {
+            if(i+j<=n-1)//upper left triangle
+              cout<<'*';
+            else
+            cout<<' ';
+            if(i+n<=j)//upper right triangle
+            cout<<'*';
+            else
+            cout<<" ";
+        }
+        cout<<endl;
+    }
+    //bottom half of pattern
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<2*n;j++)
+        {
+            if(i>=j) //bottom right triangle
+            cout<<"*";
+            else
+            cout<<" ";
+            if(i>=(2*n-1)-j)//bottom right triangle
+            cout<<"*";
+            else
+            cout<<" ";
+        }
+        cout<<endl;
+    }
+}
+int main()
+{
+    int num;
+    cout<<"enter the number of levels of the pattern:"<<endl;
+    cin>>num;
+    hollowDiamond(num);
+    return 0;
+}
+
+/* Question3. Right simple triangle of increment numbers
+1
+2 3
+4 5 6
+7 8 9 10     num=4 here */
+#include<iostream>
+using namespace std;
+void tri(int n)
+{
+    int x=1,i,j;
+    for(i=1;i<=n;i++)
+    {
+        for(j=1;j<=i;j++)
+        {
+            cout<<" "<<x++;
+        }
+        cout<<endl;
+    }
+}
+int main()
+{
+    int num;
+    cout<<"enter the number of levels";
+    cin>>num;
+    tri(num);
+}
+
+/*Question 6.
+54321
+5432
+543
+54
+5       */
+#include<iostream>
+using namespace std;
+void reverseNumTri(int n)
+{
+    int i,j;
+    for(i=1;i<=n;i++)
+    {
+        for(j=5;j>=i;j--)
+        {
+            cout<<j;
+        }
+        cout<<endl;
+    }
+}
+int main()
+{
+    int num;
+    cout<<"enter the number of levels";
+    cin>>num;
+    reverseNumTri(num);
+}
+/*Question 7.
+1  
+1 1 
+1 2 1 
+1 3 3 1 
+1 4 6 4 1 
+1 5 10 10 5 1   */
+
+#include<iostream>
+using namespace std;
+void pascalTriangle(int n)
+{
+    int i,j;
+    for(i=1;i<=n;i++)
+    {
+        int coef=1;
+        for(j=1;j<=i;j++)
+        {
+            cout<<coef<<" ";
+            coef=coef*(i-j)/j;
+            
+        }
+        cout<<endl;
+    }
+}
+int main()
+{
+    int num;
+    cout<<"enter the number of levels"<<endl;
+    cin>>num;
+    pascalTriangle(num);
+}
+/* Question 8:
+ * * * * *
+  * * * *
+   * * *
+    * *
+     *            */
+//Code
+#include <iostream>
+using namespace std;
+void reversePyramid(int n)
+{
+    int i,j,k;
+    for(i=n;i>=1;i--)
+    {
+        for(k=n-i;k>0;k--)
+        {
+            cout<<" ";
+        }
+        for(j=i;j>0;j--)
+        {
+            cout<<"* ";
+        }
+        cout<<endl;
+    }
+}
+int main()
+{
+    int num;
+    cout<<"enter number of levels of the pattern"<<endl;
+    cin>>num;
+    reversePyramid(num);
+}
+
+
+
