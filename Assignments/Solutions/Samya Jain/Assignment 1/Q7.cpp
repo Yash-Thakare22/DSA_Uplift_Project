@@ -1,4 +1,4 @@
-/*Question 6.
+/*Question 7.
 1
 1 1
 1 2 1
