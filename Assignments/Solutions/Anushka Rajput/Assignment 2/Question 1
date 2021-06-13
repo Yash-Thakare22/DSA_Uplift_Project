@@ -1,0 +1,32 @@
+/*Given an array arr[] of size N, the task is to sort the array in ascending order
+I/P: 
+6
+0 9 4 10 7 8
+O/P:
+0 4 7 8 9 10    */
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int temp, n;
+    cin>>n;
+    int a[n];
+    for(int i=0; i<n; i++)
+        cin>>a[i];
+
+    for(int j=0; j<n-1; j++)
+    {
+        for(int i=0; i<n; i++)
+        {
+            if(a[i] > a[i+1])
+            {
+                temp = a[i];
+                a[i] = a[i+1];
+                a[i+1] = temp;
+            }
+        }
+    }
+    for(int i=0; i<n; i++)
+        cout<<a[i]<<" ";
+}
