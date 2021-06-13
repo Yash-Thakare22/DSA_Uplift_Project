@@ -15,8 +15,6 @@ int main()
   }
   for(int i=0;i<m;i++)
   {
-      for(int j=0;j<n;j++)
-      {
          
         int start=0,end=n-1;
     
@@ -30,7 +28,7 @@ int main()
         end--;
     }
 
-      }
+      
   }
   for(int i=0;i<m;i++)
   {
