@@ -1,0 +1,25 @@
+Question 1: Given an integer array, sort it using bubble sorting algorithm.
+Input: 1 4 5 2 3
+Output: 1 2 3 4 5
+
+___________________________________________________________________________________________________________________________________________________________________________________
+
+Question 2: Given an integer array, sort it using bubble sorting algorithm.
+Input: 1 4 5 2 3
+Output: 1 2 3 4 5
+
+___________________________________________________________________________________________________________________________________________________________________________________
+
+Question 3: Given an integer array, sort it using selection sorting algorithm.
+Input: 1 4 5 2 3
+Output: 1 2 3 4 5
+
+__________________________________________________________________________________________________________________________________________________________________________________
+
+Question 4: Given a string arr consisting of lowercase english letters, arrange all its letters in lexicographical order using Counting Sort.
+
+Input:
+N = 5
+S = "edsab"
+Output:
+abdes

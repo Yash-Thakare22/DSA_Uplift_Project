@@ -1,0 +1,30 @@
+m=int(input('enter the no of rows'))
+for i in range(m,0,-1):#for(i=1;i<=n;i++)
+    for j in range(2*m-1,0,-1):#for(j=1;j<=2*n-1;j++)
+            if j>=m-(i-1) and j<=m+(i-1):
+        
+                print('*',end='')
+            else:
+                print(' ',end='') 
+    print(end='\n')                     
+    
+    
+    output2-:
+
+   ''' utkarsh@pop-os:~/Documents/utkarsh stuff/vs python$ /usr/bin/python3 "/home/utkarsh/Documents/utkarsh stuff/vs python/pyhton folder/classwork/classwork1/homework/pattern6.py"
+enter the no of rows5
+*********
+ ******* 
+  *****  
+   ***   
+    *    
+utkarsh@pop-os:~/Documents/utkarsh stuff/vs python$ 
+
+
+
+
+
+
+
+
+'''
