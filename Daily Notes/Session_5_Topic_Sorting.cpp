@@ -2,7 +2,6 @@ Question 1:
 Bubble Sort Implementation
 
 #include <iostream>
-
 using namespace std;
 
 int main()
@@ -86,6 +85,7 @@ Selection Sort Implementation
 
 #include <iostream>
 using namespace std;
+
 int main()
 {
     int n;
