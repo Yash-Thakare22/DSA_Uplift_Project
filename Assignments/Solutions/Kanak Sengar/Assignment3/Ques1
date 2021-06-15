@@ -1,0 +1,50 @@
+/* Question 1:
+Given a 2D square matrix, print the Principal and Secondary diagonals.
+Examples :
+Input:
+4
+1 2 3 4
+4 3 2 1
+7 8 9 6
+6 5 4 3
+Output:
+Principal Diagonal: 1, 3, 9, 3
+Secondary Diagonal: 4, 2, 8, 6
+*/
+
+#include <iostream>
+using namespace std;
+
+
+int main() {
+
+    int n;
+    cout << "Enter the size of the square matrix :";
+    cin >> n;
+
+    cout << "\nEnter array element : ";
+    int arr[n][n];
+    for (int i = 0; i < n; i++)
+        for (int j =0; j < n; j++)
+            cin >> arr[i][j];
+
+    cout << " The array you entered is : " << endl;
+    for (int i = 0; i < n; i++) {
+        for (int j =0; j < n; j++)
+            cout << arr[i][j] << " ";
+        cout << endl;
+    }
+
+    cout << " \nPrincipal Diagonal : " ;
+    for (int i = 0; i < n; i++)
+        cout << arr[i][i] << ", ";
+
+    cout << " \nSecondary Diagonal : " ;
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
+            if (i + j == n - 1)
+                cout << arr[i][j] << ", ";
+
+    cout<<endl;
+    return 0;
+}
