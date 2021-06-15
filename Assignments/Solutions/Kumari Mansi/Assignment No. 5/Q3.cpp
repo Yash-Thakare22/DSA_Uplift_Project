@@ -1,0 +1,33 @@
+/* The intersection of two arrays contains the elements common to both the arrays. The intersection should not count duplicate elements.
+Given two sorted arrays arr1[] and arr2[] of sizes N and M respectively. Find their intersection
+Input: 
+N = 4, arr1[] = {1, 2, 3, 4}  
+M = 5, arr2 [] = {2, 4, 6, 7, 8}
+Output: 2 4 
+*/
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n, m, i, j;
+
+    cin >> n;
+    int a[n];
+    for (i = 0; i < n; i++)
+        cin >> a[i];
+
+    cin >> m;
+    int b[m];
+    for (i = 0; i < m; i++)
+        cin >> b[i];
+
+    for (i = 0; i < m; i++)
+        for (j = 0; j < n; j++)
+            if (a[i] == b[j])
+            {
+                cout << a[i] << " ";
+                break;
+            }
+
+    return 0;
+}
