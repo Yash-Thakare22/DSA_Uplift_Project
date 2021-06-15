@@ -1,0 +1,37 @@
+
+Question 1: Given an integer array and another integer element. The task is to find if the given element is present in array or not.
+Example 1:
+Input:
+n = 4
+arr[] = {1,2,3,4}
+x = 3
+Output: 2
+
+________________________________________________________________________________________________________________________________________________________________________________
+
+Question 2: Given a sorted array of positive integers (elements may be repeated) and a number x. The task is to find the leftmost index of x in the given array.
+Example 1:
+Input:
+N = 10
+arr[] = {1,1,2,2,3,4,5,5,6,7}
+x = 1
+Output: 0
+
+_________________________________________________________________________________________________________________________________________________________________________________
+
+Question 3:Given a sorted array of size N and an integer K. Check if K is present in the array or not.
+Example 1:
+Input:
+N = 5, K = 6
+arr[] = {1,2,3,4,6}
+Output: 1
+
+_______________________________________________________________________________________________________________________________________________________________________________
+
+Question 4: Given a sorted array of positive integers (elements may be repeated) and a number x. The task is to find the rightmost index of x in the given array.
+Example 1:
+Input:
+N = 10
+arr[] = {1,1,2,2,3,4,5,5,6,7}
+x = 1
+Output: 1
