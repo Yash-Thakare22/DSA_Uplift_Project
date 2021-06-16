@@ -1,0 +1,17 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main () {
+ string a,b,temp;
+ cout<<"Enter first string";
+ getline(cin,a);
+ cout<<"Enter second string";
+ getline(cin,b);
+ temp=a;
+ a=b;
+ b=temp;
+ cout << "str1= "<<a<<endl;
+ cout << "str2= "<<b<<endl;
+}
