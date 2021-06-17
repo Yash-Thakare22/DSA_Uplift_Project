@@ -1,0 +1,30 @@
+/*  Question 2: Given an array arr[] of N positive integers and a number K. 
+The task is to find the kth smallest element in the array.
+Input: 
+N = 5, K = 3
+arr[] = {3,5,4,2,9}
+Output: 4   */
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int n=5, k=3;
+    int arr[] = {3,5,4,2,9};
+
+    for(int j=0; j<n-1; j++)    //sorting_array
+    {
+        for(int i=0; i<n; i++)
+        {
+            if(arr[i] > arr[i+1])
+            {
+                int temp = arr[i];
+                arr[i] = arr[i+1];
+                arr[i+1] = temp;
+            }
+        }
+    }
+
+    cout<<"The Kth smallest number is "<<arr[k-1];
+}
