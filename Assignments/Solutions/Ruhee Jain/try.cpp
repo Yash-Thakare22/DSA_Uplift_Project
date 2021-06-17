@@ -1,6 +1,0 @@
-/*
-
-pseudo code
-
-
-*/
