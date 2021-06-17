@@ -1,23 +1,27 @@
-/*  Question 4: Given a binary sorted non-increasing array of 1s and 0s. 
-You need to print the count of 1s in the binary array.
+/*  Question 3:Given a sorted array of size N and an integer K. Check if K is present in the array or not.
 Example 1:
 Input:
-N = 8
-arr[] = {1,1,1,1,1,0,0,0}
-Output: 5       */
+N = 5, K = 6
+arr[] = {1,2,3,4,6}
+Output: 1   */
 
 #include<iostream>
 using namespace std;
 
+int check(int arr[], int n, int k)
+{
+    for(int i=0; i<n; i++)
+    {
+        if(arr[i] == k)
+            return true;
+    }
+    return false;
+}
+
 int main()
 {
-    int n=8, i=0, count=0;
-    int arr[] = {1,1,1,1,1,0,0,0};
+    int n=5, k=6;
+    int arr[] = {1,2,3,4,6};
 
-    while(arr[i] != 0)
-    {
-        count++;
-        i++;
-    }
-    cout<<"Count is "<<count;
+    cout<<check(arr, n, k);
 }
