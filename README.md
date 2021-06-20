@@ -13,10 +13,10 @@ Step :seven:: Then create a pull request.</br>
 
 <h3> Note: The file name should be Question_No. and create a separate file for each question.</h3> <br>
 
-<h2 align="center"> Platforms to practice </h2>
+<h2 align="center"> Platforms to practice :dart: </h2>
 
- :diamonds: https://www.codechef.com/
-
+:diamonds: https://www.codechef.com/
+ 
 :diamonds: https://codeforces.com/
 
 :diamonds: https://www.hackerrank.com/
