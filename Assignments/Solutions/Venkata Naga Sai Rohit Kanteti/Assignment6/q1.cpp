@@ -24,7 +24,7 @@ for( i=0;i<n;i++)
     if(a[i]==key)
     {
         cout<<"Found at index  "<<i;
-        break;
+        
     }
 }
 if(i==n)cout<<"Element not found"    ;
