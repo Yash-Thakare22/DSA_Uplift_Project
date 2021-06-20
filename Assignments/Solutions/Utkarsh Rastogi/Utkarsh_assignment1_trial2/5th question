@@ -1,0 +1,38 @@
+n = int(input('enter the number of rows of blank triangle'))
+m = n
+for i in range(1, n+1):
+    for j in range(1, 2*n):
+        if j >= n-(i-1) and j <= n+(i-1):
+            print(' ', end='')# same concept as triangle just interchange the spaces
+        else:
+            print('*', end='')
+    print(end='\n')
+for i in range(m, 0, -1):
+    for j in range(2*m-1, 0, -1):
+        if j >= m-(i-1) and j <= m+(i-1):
+            print(' ', end='')
+        else:
+            print('*', end='')
+    print(end='\n')
+
+
+
+
+output-:
+'''utkarsh@pop-os:~/Documents/utkarsh stuff/vs python$ /usr/bin/python3 "/home/utkarsh/Documents/utkarsh stuff/vs python/pyhton folder/classwork/classwork1/homework/pattern5.py"
+enter the number of rows of blank triangle5
+**** ****
+***   ***
+**     **
+*       *
+         
+         
+*       *
+**     **
+***   ***
+**** ****
+utkarsh@pop-os:~/Documents/utkarsh stuff/vs python$ 
+
+
+
+'''
