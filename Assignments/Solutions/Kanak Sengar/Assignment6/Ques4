@@ -1,0 +1,23 @@
+/*  Question 4: Given a binary sorted non-increasing array of 1s and 0s. 
+You need to print the count of 1s in the binary array.
+Example 1:
+Input:
+N = 8
+arr[] = {1,1,1,1,1,0,0,0}
+Output: 5       */
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int n=8, i=0, count=0;
+    int arr[] = {1,1,1,1,1,0,0,0};
+
+    while(arr[i] != 0)
+    {
+        count++;
+        i++;
+    }
+    cout<<"Count is "<<count;
+}
