@@ -6,9 +6,11 @@ using namespace std;
 int main()
 {
     char s1[100];
-    cout << "String 1 :" cin >> s1;
+    cout << "String 1 :";
+    cin >> s1;
     char s2[100];
-    cout << "String 2 :" cin >> s2;
+    cout << "String 2 :";
+    cin >> s2;
     char t[100];
     int i = 0;
     while (s1[i] != '\0')

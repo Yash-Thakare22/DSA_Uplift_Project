@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int a;
+    cin>>a;
+    int x=1;
+    while(a&x){
+        a=a^x;
+        x<<=1;
+    }
+    a=a^x;
+    cout<<a;
+    return 0;
+}

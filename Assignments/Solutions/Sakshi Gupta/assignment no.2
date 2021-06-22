@@ -1,0 +1,139 @@
+Question no.1
+
+
+#include<stdio.h>
+int main()
+{
+    int temp, n;
+    scanf("%d", &n);
+    int a[n];
+    for(int i=0; i<n; i++)
+        scanf("%d", &a[i]);
+
+    for(int j=0; j<n-1; j++)
+    {
+        for(int i=0; i<n; i++)
+        {
+            if(a[i] > a[i+1])
+            {
+                temp = a[i];
+                a[i] = a[i+1];
+                a[i+1] = temp;
+            }
+        }
+    }
+    for(int i=0; i<n; i++)
+        printf("%d", a[i]);
+}
+
+/*********************************************************************************************************************************************************************************/
+
+Question no.2
+
+#include <stdio.h>
+int main()
+{
+    int n=5,a[n];
+    
+    for(int i=0; i<n; i++)
+    {
+        scanf("%d", &a[i]);
+    }
+    for(int i=0;i<n;i++)
+    {
+        if(a[i]<0)
+        {
+            printf("%d", a[i]);
+        }
+    }
+    for(int i=0;i<n;i++)
+    {
+        if(a[i]>=0)
+        {
+            printf("%d", a[i]);
+        }
+    }
+    return 0;
+}
+
+/*******************************************************************************************************************************************************************************/
+
+Question no.3
+
+#include<stdio.h>
+void rotate_array(int a[], int n)
+{
+    int i=0, j=n-1, temp;
+    while(i!=j)
+    {
+        temp = a[i];
+        a[i] = a[j];
+        a[j] = temp;
+        i++;
+    }
+}
+
+int main()
+{
+    int a[] = {1,2,3,4,5}, i;
+    int n = sizeof(a)/sizeof(a[0]);
+    for (i = 0; i < n; i++)
+        printf("%d", a[i]);
+    printf("\n");
+    
+    rotate_array(a, n);
+    for (i = 0; i < n; i++)
+        printf("%d", a[i]);
+    return 0;
+}
+
+/******************************************************************************************************************************************************************************/
+
+
+Question no.4
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a[] = {-2, -3, 4, -1, -2, 1, 5, -3};
+    int  n = sizeof(a)/sizeof(a[0]),lmax=a[0], gmax=a[0];
+    for(int i=1; i<n; i++)
+    {
+        if(a[i]>(a[i]+lmax))
+        {
+            lmax = a[i];
+        }
+        else
+            lmax = lmax + a[i];
+        gmax = max(lmax, gmax);
+    }
+    cout<<gmax<<endl;
+    return 0;
+}
+
+/******************************************************************************************************************************************************************************/
+
+
+Question no.5
+
+#include<stdio.h>
+
+int main()
+{
+    int a[] = {5, 10, 40, 4, 6, 5, 10};
+    int i=0,j,n;
+    n=sizeof(a)/sizeof(a[0]);
+    for(i=0; i<n; i++)
+    {
+        for(j=i+1; j<=n; j++)
+        {
+            if(a[i]==a[j])
+            {
+                printf("%d is the first element that repeats", a[i]);
+                return 0;
+            }
+        }
+    }
+}
+
