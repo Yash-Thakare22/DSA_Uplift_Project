@@ -1,0 +1,19 @@
+Leetcode 1528. Shuffle String
+
+https://leetcode.com/problems/shuffle-string/
+
+
+class Solution {
+public:
+    string restoreString(string s, vector<int>& indices) {
+            
+        string st=s;
+        int n = s.size();
+        
+        for(int i=0;i<n;i++)
+        {
+            st[indices[i]] = s[i];
+        }
+        return st;
+    }
+};
