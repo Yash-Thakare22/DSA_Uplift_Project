@@ -1,0 +1,26 @@
+my_list=[]
+n=int(input('Enter the elements'))
+for i in range(n):
+    my_list.append(int(input(f'enter the element {i} -:')))
+print(my_list)
+for i in range(n):
+    for j in range(1,n):
+        if my_list[i]==my_list[j]:
+            break
+    break
+print(f'THE ELEMENT AT INDEX {i} IS ', end=' ')
+print(my_list[i])
+
+'''
+Output -:
+Enter the elements7
+enter the element 0 -:5
+enter the element 1 -:10
+enter the element 2 -:40
+enter the element 3 -:4
+enter the element 4 -:6
+enter the element 5 -:5
+enter the element 6 -:10
+[5, 10, 40, 4, 6, 5, 10]
+THE ELEMENT AT INDEX 0 IS  5
+'''

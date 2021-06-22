@@ -1,0 +1,58 @@
+#clockwise shift of an array-:
+
+'''
+1st approach
+'''
+'''
+m_list=[]
+n=int(input('enter the elements in the array -:'))
+for i in range(n):
+    m_list.append(int(input(f'enter the element {i} -:')))
+print(m_list)    
+# clockwising the list
+var=m_list[n-1]# assigning last element to som variable 
+for i in range(n-1):#passes would be n-1   # o(n-1)
+    m_list[n-i-1]=m_list[n-i-2]# assigning n-i-2 th element to n-i-1th 
+m_list[0]=var    # finally assigning var to first indes
+print(m_list)
+#time complexity would be o(n)
+'''
+
+'''
+utkarsh@pop-os:~/Documents/utkarsh stuff/vs python$ /usr/bin/python3 "/home/utkarsh/Documents/utkarsh stuff/vs python/pyhton folder/classwork/classwork1/homework 1/homework2/3rd.py"
+enter the elements in the array -:5
+enter the element 0 -:1 
+enter the element 1 -:2
+enter the element 2 -:3
+enter the element 3 -:4
+enter the element 4 -:5
+[1, 2, 3, 4, 5]
+[5, 1, 2, 3, 4]
+'''
+
+#approach2  2pointer approach
+m_list=[]
+n=int(input('enter the elements in the array -:'))
+for i in range(n):
+    m_list.append(int(input(f'enter the element {i} -:')))
+print(m_list)    
+# clockwising the list
+i=0# i is at 0th index
+j=n-1 # j is at last index
+while i!=j:
+    temp=m_list[i]# swapping
+    m_list[i]=m_list[j]
+    m_list[j]=temp
+    i=i+1# increasing i
+    
+print(m_list)    
+'''
+
+enter the elements in the array -:5
+enter the element 0 -:1
+enter the element 1 -:2
+enter the element 2 -:3
+enter the element 3 -:4
+enter the element 4 -:5
+[1, 2, 3, 4, 5]
+[5, 1, 2, 3, 4]'''
