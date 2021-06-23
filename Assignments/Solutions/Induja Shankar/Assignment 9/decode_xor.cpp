@@ -5,7 +5,7 @@ public:
         result.push_back(first);
         
         for(int i = 0; i < encoded.size(); i++)
-            arr.push_back(first ^= encoded[i]);
+            result.push_back(first ^= encoded[i]);
             
         return result;
     }
