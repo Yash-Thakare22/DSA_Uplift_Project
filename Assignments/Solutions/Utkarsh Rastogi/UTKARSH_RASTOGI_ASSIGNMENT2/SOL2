@@ -1,0 +1,64 @@
+# positive on right side and negative on left side
+my_list=[]
+n=int(input('enter the elements of the list'))
+for i in range(n):
+    my_list.append(int(input(f'enetr the elment {i} ')))
+print(my_list)    
+new_list=[]
+j=0
+k=n-1
+for i in range(n):
+    if (my_list[i]<0):
+        
+        new_list.insert(j,my_list[i])#j is index and my_list[i] is object
+        j=j+1 
+    else:
+        
+        new_list.insert(k,my_list[i]) #k point at the last index of new array
+        k=k-1
+print(new_list)            
+
+
+'''
+algorithm-:
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+  int arr[6]={-5,9,8,-3,9,4};
+  int ar[6];
+  int j=0,k=6-1,i;
+  for(i=0;i<6;i++)
+   {
+     if(arr[i]<0)
+     {
+       ar[j]=arr[i];
+       j++;
+     }
+     else
+     {
+       ar[k]=arr[i];
+       k--;
+     }
+    /* code */
+  }
+  for(j=0;j<6;j++)
+  {
+    cout<<ar[j]<<" ";
+  }
+  return 0;
+}
+'''
+'''
+output-:
+enter the elements of the list7
+enetr the elment 0 -2
+enetr the elment 1 -3
+enetr the elment 2 7
+enetr the elment 3 9
+enetr the elment 4 -4
+enetr the elment 5 2
+enetr the elment 6 5
+[-2, -3, 7, 9, -4, 2, 5]
+[-2, -3, -4, 5, 7, 2, 9]'''
