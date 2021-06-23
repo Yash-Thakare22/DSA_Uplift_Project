@@ -68,7 +68,7 @@ int main() {
     }
     else
     {
-        cout<<"Element found at: "<<index<<endl;
+        cout<<"Element found at index : "<<index<<endl;
     }
         
     
