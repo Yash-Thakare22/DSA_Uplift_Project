@@ -1,0 +1,48 @@
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int i,j,n,temp;
+    cout<<"Enter no of rows of square matrix";
+    cin>>n;
+    int arr[n][n];
+    cout<<"Enter array";
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            cin>>arr[i][j];
+        }
+    }
+      for (int i = 0; i < n / 2; i++)
+    {
+        for (int j = 0; j < n; j++) {
+
+           
+           temp=arr[i][j];
+           arr[i][j]=arr[n - i - 1][n - j - 1];
+           arr[n - i - 1][n - j - 1]=temp;
+        }
+    }
+
+  if (n%2==1)
+    {
+        for (int j = 0; j < n/2; j++) {
+           
+           temp=arr[n/2][j];
+           arr[n/2][j]=arr[n/2][n - j - 1];
+           arr[n /2][n - j - 1]=temp;
+        }}
+
+
+     for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            cout<<arr[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+    return 0;
+}

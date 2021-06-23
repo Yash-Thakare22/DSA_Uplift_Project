@@ -1,0 +1,161 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n;
+    cin >> n;
+    int a[n];
+    for (int i = 0; i < n; i++)
+    {
+        cin >> a[i];
+    }
+    for (int i = 0; i < n - 1; i++)
+    {
+        for (int j = 0; j < n - 1; j++)
+        {
+            if (a[j] > a[j + 1])
+            {
+                swap(a[j], a[j + 1]);
+            }
+        }
+    }
+    for (int i = 0; i < n; i++)
+    {
+        cout << a[i] << " ";
+    }
+    return 0;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///////////////////////////////2nd 
+
+
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int i, j, t, n, k;
+    cin >> n;
+    cin >> k;
+    int a[n];
+    int flag;
+    for (i = 0; i < n; i++)
+        cin >> a[i];
+    for (i = 0; i < n; i++)
+    {
+        flag = 0;
+        for (j = 0; j < n - 1; j++)
+        {
+            if (a[j] > a[j + 1])
+            {
+                t = a[j];
+                a[j] = a[j + 1];
+                a[j + 1] = t;
+                flag = 1;
+            }
+        }
+        if (flag == 0)
+        {
+            break;
+        }
+    }
+    for (i = 0; i < n; i++)
+        if (i == k - 1)
+            cout << a[i] << " ";
+    return 0;
+} 
+
+
+
+
+
+
+
+
+
+
+
+//////////////////////////3rd
+
+
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n, m, i, j;
+
+    cin >> n;
+    int a[n];
+    for (i = 0; i < n; i++)
+        cin >> a[i];
+
+    cin >> m;
+    int b[m];
+    for (i = 0; i < m; i++)
+        cin >> b[i];
+
+    for (i = 0; i < m; i++)
+        for (j = 0; j < n; j++)
+            if (a[i] == b[j])
+            {
+                cout << a[i] << " ";
+                break;
+            }
+
+    return 0;
+} 
+
+
+
+
+
+
+
+
+
+
+/////////////////////4th
+
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    string s;
+    int n;
+    cin >> n;
+    cin >> s;
+    for (int i = 0; i < n - 1; i++)
+    {
+        for (int j = 0; j < n - 1; j++)
+        {
+            if (s[j] > s[j + 1])
+                swap(s[j], s[j + 1]);
+        }
+    }
+    for (int i = 0; i < n; i++)
+        cout << s[i];
+    return 0;
+} 
+
+
+
+
+

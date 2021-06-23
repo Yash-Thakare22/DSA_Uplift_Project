@@ -1,0 +1,49 @@
+Question 1
+
+Given two strings str1 and str2, write program to swap two strings
+
+I/P:
+str1="C++" , str2="Java"
+O/P:
+str1="Java" , str2="C++"
+
+
+Question 2
+
+Given a string str, the task is to remove all the duplicates in the given string
+
+I/P:
+aababcdd
+O/P:
+abcd
+
+
+Question 3
+
+Given two strings, removes the characters from the first string which are present in the second string
+
+I/P:
+str1="leetcode" , str2="let"
+O/P:
+cod
+
+
+Question 4
+
+Given a string str, write program reverse words in a given string
+
+I/P:
+Do problem solving
+O/P:
+solving problem Do
+
+
+Question 5
+
+Given two strings, write program to check whether two given strings are anagram of each other or not
+An anagram of a string is another string that contains the same characters, only the order of characters can be different
+
+I/P:
+str1="triangle" , str2="integral"
+O/P:
+Yes. Two strings are anagram of each other
