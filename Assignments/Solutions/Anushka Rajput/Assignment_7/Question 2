@@ -1,0 +1,19 @@
+/*  Given two i/p signed integers, write function that returns true if the signs of 
+given integers are different, otherwise false.
+I/P:
+-4 +5
+O/P:
+True    */
+#include<stdbool.h>
+#include <bits/stdc++.h>
+using namespace std;
+   
+int main()
+{
+    int x = -4, y = 5, k;
+    k = ((x^y) < 0);
+    if(k==true)
+        cout<<"True";
+    else
+        cout<<"False";
+}
