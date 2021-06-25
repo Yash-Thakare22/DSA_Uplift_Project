@@ -1,0 +1,27 @@
+/*Write a one line function to return position of first 1 from right to left,
+  in binary representation of an integer
+I/P: 18 (010010)
+O/P:2   */
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int PosRightmostSetbit(int n)
+{
+	int pos = 1;
+	int m = 1;
+
+	while (!(n & m)) 
+    { 
+		m = m << 1;
+		pos++;
+	}
+	return pos;
+}
+
+int main()
+{
+	int n = 18;
+	cout << PosRightmostSetbit(n);
+	return 0;
+}

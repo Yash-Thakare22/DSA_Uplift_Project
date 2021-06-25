@@ -1,0 +1,23 @@
+/*Write a program to add one to a given number. You are allowed to use only bitwise operator
+I/P: 30
+O/P: 31  */
+#include <bits/stdc++.h>
+using namespace std;
+
+int addOne(int x)
+{
+	int m = 1;
+	while( x & m )
+	{
+		x = x ^ m;
+		m <<= 1;
+	}
+	x = x ^ m;
+	return x;
+}
+
+int main()
+{
+	cout<<addOne(30);
+	return 0;
+}
