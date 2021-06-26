@@ -1,0 +1,58 @@
+Question 1
+Given an i/p array where every element occurs three times, except one element which occurs only once . Find that element
+
+I/P:
+4 3 5 5 4 4 5
+
+O/P:
+3
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Question 2
+Given two i/p signed integers, write function that returns true if the signs of given integers are different, otherwise false
+
+I/P:
+-4 +5
+
+O/P:
+True
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Question 3
+Given an integer n, find whether it is a power of 4 or not
+
+I/P:
+16
+
+O/P:
+Yes
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Question 4
+Given an integer x, write a function that multiplies x with 3.5 and returns the integer result. You are allowed to use only bitwise operator
+
+I/P:
+5 
+
+O/P:
+17
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Question 5
+Write a program to add one to a given number. You are allowed to use only bitwise operator
+
+I/P:
+30
+
+O/P:
+31
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Question 6
+Write a one line function to return position of first 1 from right to left, in binary representation of an integer
+
+I/P:
+18 (010010)
+
+O/P:
+2
