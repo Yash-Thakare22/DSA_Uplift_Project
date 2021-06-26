@@ -1,0 +1,14 @@
+https://practice.geeksforgeeks.org/problems/odd-or-even3618/1#
+
+
+class Soltion
+public:
+    string oddEven(int N){
+        // code here 
+        
+        if(N & 1)
+        return "odd";
+        
+        return "even";
+    }
+};
