@@ -1,0 +1,231 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+
+ // } Driver Code Ends
+//User function template for C++
+class Solution{
+public:	
+	// swap k'th element from beginning and end
+	void swapKth(int *arr, int n, int k) {
+	    swap(arr[k-1],arr[n-k]);
+
+	}
+};
+
+
+// { Driver Code Starts.
+
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        int n, k;
+        cin >> n >> k;
+        int arr[n];
+        for (int i = 0; i < n; i++) {
+            cin >> arr[i];
+        }
+        Solution ob;
+        ob.swapKth(arr, n, k);
+        for (int i = 0; i < n; i++) {
+            cout << arr[i] << " ";
+        }
+        cout << "\n";
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+///////////
+
+
+
+
+#include<bits/stdc++.h> 
+using namespace std; 
+class Solution{   
+public:
+    string oddEven(int n){
+        // code here 
+        if(n&1) return "odd";
+        else return "even";
+    }
+};
+int main() 
+{ 
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int N;
+        cin >> N;
+        Solution ob;
+        cout << ob.oddEven(N) << endl;
+    }
+    return 0; 
+}    
+
+
+
+
+
+
+
+
+//////////////////////////q3
+
+
+#include <bits/stdc++.h>
+using namespace std;
+class Solution{
+public:
+	int countZeros(vector<vector<int>>A)
+	{
+		//code here
+		int c=0;
+		int n=A.size();
+		for(int i=0;i<n;i++){
+		    for(int j=0;j<n;j++){
+		        if(A[i][j] == 0) c++;
+		    }
+		}return c;
+	}
+};
+
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int n;
+        cin>>n;
+        vector<vector<int>>A(n,vector<int>(n,0));
+        for(int i=0;i<n;i++){
+            for(int j =0;j<n;j++){
+                cin>>A[i][j];
+            }
+        }
+        Solution ob;
+        cout<<ob.countZeros(A)<<'\n';
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////q4
+
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+class Solution{
+    public:
+        vector<int> findElements(int a[], int n)
+    {
+        // Your code goes here 
+        sort(a,a+n);
+        vector <int> m;
+        for(int i=0;i<n-2;i++){
+            m.push_back(a[i]);
+        }return m;
+    }
+};
+
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int n;
+        cin>>n;
+        int a[n];
+        for(int i=0;i<n;i++)
+        cin>>a[i];
+        Solution ob;
+        vector <int> res = ob.findElements(a,n);
+
+        for(int i=0;i<res.size();i++)
+        cout<<res[i]<<" ";
+        cout<<endl;
+    }
+}   
+
+
+
+
+
+
+
+
+
+
+
+
+
+/////////////////////////q5
+
+
+
+
+
+
+
+
+
+
+#include<bits/stdc++.h>
+using namespace std;
+class Solution
+{
+  public:
+    string modify (string s)
+    {
+        //code here.
+        string m="";
+        for(int i=0;i<s.length();i++){
+            if(s[i]==' ') continue;
+            else m+=s[i];
+        }return m;
+    }
+};
+
+int main()
+{
+    int t;
+    cin >> t;
+    cin.ignore ();
+    while (t--)
+    {
+        string s;
+        getline (cin, s);
+        Solution ob;
+        cout <<ob.modify (s) << endl;
+    }
+    return 0;
+}
