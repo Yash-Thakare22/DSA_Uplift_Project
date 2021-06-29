@@ -1,0 +1,69 @@
+/*Given a M*N matrix, print the matrix in spiral order
+Input:
+[  1   2   3   4  5 ]
+[ 16  17  18  19  6 ]
+[ 15  24  25  20  7 ]
+[ 14  23  22  21  8 ]
+[ 13  12  11  10  9 ]
+Output:
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25   */
+#include <bits/stdc++.h>
+using namespace std;
+#define R 5
+#define C 5
+ 
+void spiralPrint(int row_end, int col_end, int a[R][C])
+{
+    int i, row_start = 0, col_start = 0;
+ 
+    /*  row_start - starting row index
+        row_end - ending row index
+        col_start - starting column index
+        col_end - ending column index
+        i - iterator
+    */
+ 
+    while (row_start < row_end && col_start < col_end) {
+        /* Print the first row from the remaining rows */
+        for (i = col_start; i < col_end; ++i) {
+            cout << a[row_start][i] << " ";
+        }
+        row_start++;
+ 
+        /* Print the last column from the remaining columns */
+        for (i = row_start; i < row_end; ++i) {
+            cout << a[i][col_end - 1] << " ";
+        }
+        col_end--;
+ 
+        /* Print the last row from the remaining rows */
+        if (row_start < row_end) {
+            for (i = col_end - 1; i >= col_start; --i) {
+                cout << a[row_end - 1][i] << " ";
+            }
+            row_end--;
+        }
+ 
+        /* Print the first column from the remaining columns */
+        if (col_start < col_end) {
+            for (i = row_end - 1; i >= row_start; --i) {
+                cout << a[i][col_start] << " ";
+            }
+            col_start++;
+        }
+    }
+}
+ 
+/* Driver Code */
+int main()
+{
+    int a[R][C] = { {  1,  2,  3,  4, 5 },
+                    { 16, 17, 18, 19, 6 },
+                    { 15, 24, 25, 20, 7 },
+                    { 14, 23, 22, 21, 8 },
+                    { 13, 12, 11, 10, 9 }  };
+     
+      // Function Call
+    spiralPrint(R, C, a);
+    return 0;
+}

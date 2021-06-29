@@ -1,0 +1,58 @@
+/*
+An array contains both positive and negative numbers in random order. 
+Rearrange the array elements so that all negative numbers appear before all positive numbers
+Note: Order of elements is not important here
+I/P:
+-2  -3 7 9 -4 2 5 
+O/P:
+-2 -3 –4 7 9 2 5
+*/
+
+#include <iostream>
+using namespace std;
+
+void shiftall(int a[], int s,int l) //s = start , l = last
+{
+    while(s<=l)
+    {
+        if(a[s]>0 && a[l]<0)
+        {
+            int temp = a[s];
+            a[s] = a[l];
+            a[l] = temp;
+            s++;
+            l--;
+        }
+        else if(a[s]<0 && a[l]<0)
+        {
+            s++;
+        }
+        else if(a[l]>0 && a[s]>0)
+            l--;
+        else
+        {
+            s++;
+            l--;
+        }
+    }
+}
+
+
+int main()
+{
+    int a[] = {-2, -3, 7, 9, -4, 2, 5};
+    int n = sizeof(a)/sizeof(a[0]);
+   
+    cout <<"Given array is: "<<endl;
+    for (int i=0; i<n; i++)
+        cout<<a[i]<<" ";
+    cout<<endl;
+
+    // Function Call
+    shiftall(a,0,n-1);
+    
+    cout<<"Rearranged array is: "<<endl;
+    for (int i = 0; i<n; i++)
+        cout<<a[i]<<" ";
+    return 0;
+}

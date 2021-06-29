@@ -1,0 +1,15 @@
+#include<iostream>
+#include<algorithm>
+using namespace std;
+int main() {
+    string s1,s2;
+    getline(cin,s1);
+    getline(cin,s2);
+    sort(s1.begin(),s1.end());
+    sort(s2.begin(),s2.end());
+    if(s1==s2)
+        cout<<"yes,the 2 strings r anagram of each other";
+    else
+        cout<<"no,they r not anagram of each other";
+    return 0;
+}
