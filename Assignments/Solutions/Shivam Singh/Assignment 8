@@ -1,0 +1,370 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+// } Driver Code Ends
+//User function template for C++
+class Solution
+{
+public:
+    // swap k'th element from beginning and end
+    void swapKth(int *arr, int n, int k)
+    {
+        swap(arr[k - 1], arr[n - k]);
+    }
+};
+
+// { Driver Code Starts.
+
+int main()
+{
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        int n, k;
+        cin >> n >> k;
+        int arr[n];
+        for (int i = 0; i < n; i++)
+        {
+            cin >> arr[i];
+        }
+        Solution ob;
+        ob.swapKth(arr, n, k);
+        for (int i = 0; i < n; i++)
+        {
+            cout << arr[i] << " ";
+        }
+        cout << "\n";
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////// q2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+// } Driver Code Ends
+//Back-end complete function Template for C++
+
+class Solution
+{
+public:
+    int countZeros(vector<vector<int>> A)
+    {
+        int count = 0;
+        int n = A.size();
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = 0; j < n; j++)
+            {
+                if (A[i][j] == 0)
+                    count++;
+            }
+        }
+        return count;
+    }
+};
+
+// { Driver Code Starts.
+
+// Driver program
+int main()
+{
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        int n;
+        cin >> n;
+        vector<vector<int>> A(n, vector<int>(n, 0));
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = 0; j < n; j++)
+            {
+                cin >> A[i][j];
+            }
+        }
+        Solution ob;
+        cout << ob.countZeros(A) << '\n';
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//////////////////q3
+
+
+
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+// } Driver Code Ends
+class Solution
+{
+public:
+    vector<int> findElements(int a[], int n)
+    {
+        sort(a, a + n);
+        vector<int> v;
+        for (int i = 0; i < (n - 2); i++)
+        {
+            v.push_back(a[i]);
+        }
+        return v;
+    }
+};
+
+// { Driver Code Starts.
+
+int main()
+{
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        int n;
+        cin >> n;
+        int a[n];
+        for (int i = 0; i < n; i++)
+            cin >> a[i];
+        Solution ob;
+        vector<int> res = ob.findElements(a, n);
+
+        for (int i = 0; i < res.size(); i++)
+            cout << res[i] << " ";
+        cout << endl;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//////////////////////////q4
+
+
+
+
+
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+// } Driver Code Ends
+
+class Solution
+{
+public:
+    string modify(string s)
+    {
+        string s2 = "";
+        for (int i = 0; i < s.length(); i++)
+        {
+            if (s[i] != ' ')
+            {
+                s2 += s[i];
+            }
+        }
+        return s2;
+    }
+};
+
+// { Driver Code Starts.
+int main()
+{
+    int t;
+    cin >> t;
+    cin.ignore();
+    while (t--)
+    {
+        string s;
+        getline(cin, s);
+        Solution ob;
+        cout << ob.modify(s) << endl;
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///////////////////////q5
+
+
+
+
+#include <bits/stdc++.h>
+#include <string>
+using namespace std;
+
+// } Driver Code Ends
+class Solution
+{
+public:
+    string triDownwards(string S)
+    {
+        string result = "";
+        for (int i = 0; i < S.length(); i++)
+        {
+            for (int j = 0; j < S.length(); j++)
+            {
+                if (j < i)
+                    result += ".";
+                else
+                    result += S[j];
+            }
+        }
+        return result;
+    }
+};
+
+// { Driver Code Starts.
+int main()
+{
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        string S;
+
+        cin >> S;
+
+        Solution ob;
+        string ans = ob.triDownwards(S);
+
+        for (int i = 0; i < ans.length(); i++)
+        {
+            cout << ans[i];
+            if ((i + 1) % S.length() == 0)
+                cout << endl;
+        }
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//////////////////////////////q6
+
+#include <bits/stdc++.h>
+using namespace std;
+
+// } Driver Code Ends
+class Solution
+{
+public:
+    string oddEven(int N)
+    {
+        if (N & 1)
+            return "odd";
+
+        return "even";
+    }
+};
+
+// { Driver Code Starts.
+int main()
+{
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        int N;
+        cin >> N;
+        Solution ob;
+        cout << ob.oddEven(N) << endl;
+    }
+    return 0;
+}
