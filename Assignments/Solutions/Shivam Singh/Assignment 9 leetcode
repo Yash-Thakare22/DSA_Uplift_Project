@@ -1,0 +1,137 @@
+//////////////////////q1
+class Solution
+{
+public:
+    vector<int> shuffle(vector<int> &nums, int n)
+    {
+        vector<int> result;
+        for (int i = 0, j = i + n; i < n, j < nums.size(); i++, j++)
+        {
+            result.push_back(nums[i]);
+            result.push_back(nums[j]);
+        }
+        return result;
+    }
+};
+
+
+
+
+/////////////////////////q2
+class Solution
+{
+public:
+    int countNegatives(vector<vector<int>> &grid)
+    {
+        int rows = grid.size();
+        int cols = grid[0].size();
+        int count = 0;
+        for (int i = 0; i < rows; i++)
+        {
+            for (int j = cols - 1; j >= 0; j--)
+            {
+                if (grid[i][j] >= 0)
+                    break;
+                else
+                    count++;
+            }
+        }
+        return count;
+    }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///////////////////////q3
+
+
+
+
+class Solution
+{
+public:
+    string restoreString(string s, vector<int> &indices)
+    {
+        string res;
+        res.resize(s.length());
+        for (int i = 0; i < indices.size(); i++)
+        {
+            res[indices[i]] = s[i];
+        }
+        return res;
+    }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+//////////////////q5
+class Solution
+{
+public:
+    int countMatches(vector<vector<string>> &items, string ruleKey, string ruleValue)
+    {
+        int ans = 0;
+        int index = 0;
+        if (ruleKey == "color")
+            index = 1;
+        else if (ruleKey == "name")
+            index = 2;
+        for (auto it : items)
+        {
+            if (it[index] == ruleValue)
+                ans++;
+        }
+        return ans;
+    }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///////////////////////q6
+class Solution
+{
+public:
+    vector<int> decode(vector<int> &encoded, int first)
+    {
+        vector<int> ans{first};
+        for (int x : encoded)
+            ans.push_back(first ^= x);
+        return ans;
+    }
+};
