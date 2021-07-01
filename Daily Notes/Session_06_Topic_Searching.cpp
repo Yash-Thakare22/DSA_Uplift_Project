@@ -139,4 +139,3 @@ int main()
 Time Complexity: O(log2(log2 n)) for the average case, and O(n) for the worst case (when items are distributed exponentially) , best case time complexity is O(1).
 
 Other searching algorithms are jump search , ternary search.
-
