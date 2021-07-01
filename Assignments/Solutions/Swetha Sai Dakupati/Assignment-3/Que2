@@ -1,0 +1,45 @@
+/*******************************************************************************************************
+ Question2:
+Given a 2D array arr[][] of size M x N integers where M is the number of rows and N is the number of columns. The task is to reverse every row of the given 2D array.
+Example: 
+ 
+
+Input: arr[][] = 
+{ {1, 2, 3},
+  {4, 5, 6},
+  {7, 8, 9} }
+Output:
+3 2 1
+6 5 4
+9 8 7
+
+***************************************************************************************************/
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int m,n;
+    cin>>m>>n;
+    int matrix[m][n],i,j;
+    for(i=0;i<m;i++){
+        for(j=0;j<n;j++){
+            cin>>matrix[i][j];
+        }
+    }
+    for(i=0;i<m;i++){
+        for(j=0;j<n/2;j++){
+            int t=matrix[i][j];
+            matrix[i][j]=matrix[i][n-j-1];
+            matrix[i][n-j-1]=t;
+        }
+    }
+    cout<<"Output Matrix after reversing the rows: "<<endl;
+    for(i=0;i<m;i++){
+        for(j=0;j<n;j++){
+            cout<<matrix[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+	return 0;
+}

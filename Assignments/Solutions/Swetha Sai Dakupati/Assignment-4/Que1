@@ -1,0 +1,17 @@
+'''
+
+Question 1
+
+Given two strings str1 and str2, write program to swap two strings
+
+I/P:
+str1="C++" , str2="Java"
+O/P:
+str1="Java" , str2="C++"
+
+'''
+str1=input('Enter String 1 : ')
+str2=input('Enter String 2 : ')
+print("Given strings before swapping : {}  and {}.".format(str1,str2))
+str1,str2=str2,str1
+print("Given strings after swapping : {}  and {}.".format(str1,str2))

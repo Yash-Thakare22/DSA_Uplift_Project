@@ -1,0 +1,55 @@
+/******************************************************************************
+
+Question 2
+
+An array contains both positive and negative numbers in random order. Rearrange the array elements so that all negative numbers appear before all positive numbers
+Note: Order of elements is not important here
+
+
+I/P:
+-2  -3 7 9 -4 2 5 
+
+O/P:
+-2 -3 -4 7 9 2 5
+
+*******************************************************************************/
+#include <iostream>
+using namespace std;
+
+int
+main ()
+{
+  int n;
+  cin >> n;
+  int a[n], ele, i, j, k, zero;
+  i = 0;			// to insert into array from first if -ve number is entered
+  j = n - 1;			// to insert into array from last if +ve number is enetered.
+  zero = 0;			// count the number of zeroes and insert them after -ve numbers
+  for (k = 0; k < n; k++)
+    {
+      cin >> ele;
+      if (ele < 0)
+	{			// if -ve number is entered insert from first with the help of i
+	  a[i] = ele;
+	  i++;
+	}
+      else if (ele > 0)
+	{			// if +ve number is entered insert from last with the help of j
+	  a[j] = ele;
+	  j--;
+	}
+      else
+	zero++;			// count the no.of zeroes 
+    }
+  while (zero > 0)
+    {				// inserting zeroes after -ve numbers with index i
+      a[i] = 0;
+      i++;
+      zero--;
+    }
+  cout << "Given array after re-arrangement : ";
+  for (i = 0; i < n; i++)
+    cout << a[i] << " ";
+  return 0;
+}
+
