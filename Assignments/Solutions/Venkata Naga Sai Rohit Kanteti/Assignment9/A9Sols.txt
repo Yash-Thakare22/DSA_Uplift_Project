@@ -1,0 +1,97 @@
+1)
+class Solution {
+public:
+    vector<int> shuffle(vector<int>& nums, int n) {
+        int i=0,j=n;
+        vector<int> res(2*n,0);
+        for(int k=0;k<2*n;k++)
+        {
+            if(k%2==0)
+            {
+                res[k] = nums[i];
+                i++;
+            }
+            else
+            {
+                res[k]=nums[j];
+                j++;
+            }
+        }
+        
+        return res;
+    }
+};
+--------------------------------------------------------------
+2)
+class Solution {
+public:
+    int countNegatives(vector<vector<int>>& grid) {
+        int count=0;
+        int n=grid[0].size();
+        int m = grid.size();
+        int row = m-1;
+        int col = 0;
+        while(col<n && row>=0)
+        {
+            if(grid[row][col]<0)
+            {
+                row--;
+                count += n-col;
+            }
+            else
+            {
+                col++;
+            }
+        }
+        return count;
+    }
+};
+---------------------------------------------------------------
+3)
+class Solution {
+public:
+    string restoreString(string s, vector<int>& indices) {
+        string ans(s.size(),' ');
+        for(int i=0;i<indices.size();i++)
+        {
+            ans[indices[i]] = s[i];
+        }
+        return ans;
+    }
+};
+--------------------------------------------------------------
+4)
+class Solution {
+public:
+    int countMatches(vector<vector<string>>& items, string ruleKey, string ruleValue) {
+        int col,count=0;
+        if(ruleKey=="type")
+            col=0;
+        else if(ruleKey=="color")
+            col=1;
+        else 
+            col=2;
+        for(int i=0;i<items.size();i++)
+        {
+            if(items[i][col]==ruleValue)count++;
+                    
+        }
+        
+        return count;
+            
+    }
+};
+---------------------------------------------------------------------
+5)
+class Solution {
+public:
+    vector<int> decode(vector<int>& encoded, int first) {
+        vector<int> res;
+        res.push_back(first);
+        for(int i=0;i<encoded.size();i++)
+        {
+            res.push_back(encoded[i]^res[i]);
+        }
+        return res;
+    }
+};
