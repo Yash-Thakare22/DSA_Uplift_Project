@@ -26,3 +26,11 @@ Step :seven:: Then create a pull request.</br>
 :diamonds: https://www.geeksforgeeks.org/
 
 :diamonds: https://www.interviewbit.com/practice/
+
+<h2 align="center"> Resources 📢 </h2>
+
+:diamonds: https://techdose.co.in/7-days-dsa-cheat-sheet-quick-preparation-plan/
+
+:diamonds: https://seanprashad.com/leetcode-patterns/
+
+
