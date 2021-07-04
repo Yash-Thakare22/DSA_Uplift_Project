@@ -1,5 +1,14 @@
 # DSA_Uplift_Project Batch 1
 
+<h2 align="center"> Mentors :technologist: </h2>
+<h3>:man_technologist: Yash Thakare <a href="https://linkedin.com/in/yashthakare" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="Yash Thakare" height="20" width="40" /></a> </h3> 
+
+<h3>:woman_technologist: Anushka Srivastava <a href="https://linkedin.com/in/anushka-srivastava-0b08b61b1" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="Anushka Srivastava" height="20" width="40" /></a> </h3> 
+
+<h3>:woman_technologist: Sargam Agarwal <a href="https://linkedin.com/in/sargam-agarwal-9320791a5" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="Sargam Agarwal" height="20" width="40" /></a> </h3>
+
+<h3>:woman_technologist: Swarnima Shishodia <a href="https://linkedin.com/in/swarnima-shishodia-605802193" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="swarnima shishodia" height="20" width="40" /></a> </h3>
+
 <h2 align="center"> How to submit the assignment :question: </h2>
 
 Step :one:: Fork the repository.</br>
@@ -33,4 +42,13 @@ Step :seven:: Then create a pull request.</br>
 
 :diamonds: https://seanprashad.com/leetcode-patterns/
 
+:diamonds: https://450dsa.com/
+
+:diamonds: https://docs.google.com/document/d/1SM92efk8oDl8nyVw8NHPnbGexTS9W-1gmTEYfEurLWQ/edit
+
+<h2 align="center"> Contributors :smile: </h2>
+
+<a href="https://github.com/YashThakare/DSA_Uplift_Project/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=YashThakare/DSA_Uplift_Project" />
+</a>
 
