@@ -1,7 +1,7 @@
 # DSA_Uplift_Project Batch 1
 
 <h2 align="center"> Mentors :technologist: </h2>
-<h3>:man_technologist: Yash Thakre <a href="https://linkedin.com/in/yashthakare" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="Yash Thakare" height="20" width="40" /></a> </h3> 
+<h3>:man_technologist: Yash Thakare <a href="https://linkedin.com/in/yashthakare" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="Yash Thakare" height="20" width="40" /></a> </h3> 
 
 <h3>:woman_technologist: Anushka Srivastava <a href="https://linkedin.com/in/anushka-srivastava-0b08b61b1" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="Anushka Srivastava" height="20" width="40" /></a> </h3> 
 
