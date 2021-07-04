@@ -9,8 +9,6 @@
 
 <h3>:woman_technologist: Swarnima Shishodia <a href="https://linkedin.com/in/swarnima-shishodia-605802193" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="swarnima shishodia" height="20" width="40" /></a> </h3>
 
-
-
 <h2 align="center"> How to submit the assignment :question: </h2>
 
 Step :one:: Fork the repository.</br>
@@ -44,4 +42,9 @@ Step :seven:: Then create a pull request.</br>
 
 :diamonds: https://seanprashad.com/leetcode-patterns/
 
+<h2 align="center"> Contributors :smile: </h2>
+
+<a href="https://github.com/YashThakare/DSA_Uplift_Project/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=YashThakare/DSA_Uplift_Project" />
+</a>
 
