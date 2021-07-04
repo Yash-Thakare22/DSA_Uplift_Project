@@ -42,6 +42,10 @@ Step :seven:: Then create a pull request.</br>
 
 :diamonds: https://seanprashad.com/leetcode-patterns/
 
+:diamonds: https://450dsa.com/
+
+:diamonds: https://docs.google.com/document/d/1SM92efk8oDl8nyVw8NHPnbGexTS9W-1gmTEYfEurLWQ/edit
+
 <h2 align="center"> Contributors :smile: </h2>
 
 <a href="https://github.com/YashThakare/DSA_Uplift_Project/graphs/contributors">
