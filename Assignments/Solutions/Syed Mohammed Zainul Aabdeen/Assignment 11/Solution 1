@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+void checkSparse(int n) {
+   int res = n & (n >> 1);
+   if(res == 0)
+      cout<<"true";
+   else
+      cout<<"false";
+   return ;
+}
+int main() {
+   int n;cin>>n;
+   checkSparse(n);
+   return 0;
+}
