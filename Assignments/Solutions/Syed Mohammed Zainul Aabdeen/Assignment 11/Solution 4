@@ -1,0 +1,32 @@
+//why copy is sp hard
+#include <iostream>
+using namespace std;
+bool patternSearch(string s,string p){
+    int n,m;
+    n=s.size();
+    m=p.size();
+    for(int i=0;i<n-m;i++){
+        int flag=1;
+        for(int j=0;j<m;j++){
+            if(s[i+j]!=p[j]){
+                break;
+                flag=0; 
+                
+            } 
+            
+        }
+        if (flag==1)
+            return true;
+    }
+    return false;
+}
+int main(){
+    string a,b;
+    getline(cin,a);
+    getline(cin,b);
+    if(patternSearch(a,b))
+        cout<<"yes";
+    else
+        cout<<"no";
+    return 0;
+}
