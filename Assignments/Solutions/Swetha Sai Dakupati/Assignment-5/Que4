@@ -1,0 +1,33 @@
+/******************************************************************************
+
+Question 4: Given a string arr consisting of lowercase english letters, arrange all its letters in lexicographical order using Counting Sort.
+
+Input:
+N = 5
+S = "edsab"
+Output:
+abdes
+
+*******************************************************************************/
+#include <iostream>
+using namespace std;
+
+int
+main ()
+{
+  int n;
+  cout << "Enter no.of chars in your string: ";
+  cin >> n;
+  char s[n];
+  cout << "Enter your string in lowercase : ";
+  cin >> s;
+  int i, freq[26] = { 0 };
+  for (i = 0; i < n; i++)
+    freq[s[i] - 'a']++;
+  for (i = 0; i < 26; i++)
+    {
+      while (freq[i]--)
+	cout << (char) ('a' + i);
+    }
+  return 0;
+}
