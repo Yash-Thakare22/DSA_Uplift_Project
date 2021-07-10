@@ -10,11 +10,11 @@ int main() {
     }
     for(int i=0;i<n;i++){
         for(int j=0;j<=i;j++)
-            u+=a[i][j];
+            l+=a[i][j];
     }
     for(int i=0;i<n;i++){
         for(int j=i;j<n;j++)
-            l+=a[i][j];
+            u+=a[i][j];
     }
     cout<<"upper sum: "<<u<<endl;
     cout<<"lower sum: "<<l;
