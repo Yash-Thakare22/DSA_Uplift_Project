@@ -1,0 +1,132 @@
+1)
+bool isSparse(int n)
+    {
+        // Your code
+        
+        while(n>0)
+       {
+         if((n&3)==3)
+             return false;
+        n=n/2;
+       }
+       return true;
+    }
+----------------------------------------------------
+2) public static long equilibriumPoint(long arr[], int n) {
+      long sum=0;
+        
+        for(int i=0;i<n;i++)
+        sum+=arr[i];
+
+        long left=0, right=sum;
+        
+        for(int i=0;i<n;i++){
+            
+            if(i>0)
+            left+=arr[i-1];
+             right=sum-left;
+            right-=arr[i];
+            
+            if(left==right)
+            return (int)i+1;
+           // right=sum;
+        }
+        
+     return -1;  
+------------------------------------------------------
+3)
+ vector<int> leaders(int a[], int n){
+        // Code here
+          vector<int> leader;
+    
+    int curr_id=a[n-1];
+   
+    
+leader.push_back(curr_id);// push 
+
+     for(int i= n-2; i>=0; i--){
+        if (curr_id <=a[i]){
+            leader.push_back(a[i]);
+            curr_id=a[i];
+        }
+        
+    }
+    reverse(leader.begin(), leader.end());
+     return leader;
+        
+    }
+---------------------------------------------------------
+4)
+bool search(string pat, string txt) 
+    { 
+        // Your code here
+        int m=pat.length();
+        int n=txt.length();
+        for (int i=0;i<=n-m;){
+            int j;
+            for(j=0;j<m;j++){
+                if (pat[j]!=txt[i+j]){
+                    break;
+                }
+                if (j==m-1){
+                    return true;
+                }
+            }
+                
+            if (j==0){  
+                i++;
+            }
+            else{
+                i=i+j;
+            }
+
+        }
+        return false;
+    } 
+------------------------------------------------------------
+5)
+ void transpose(vector<vector<int> >& matrix, int n)
+    { 
+        // code here
+        for(int i=0; i<n; i++)
+        {
+            for(int j=0; j<=i; j++)
+            {
+                swap(matrix[i][j],matrix[j][i]);
+            
+            }
+        
+            
+        }
+        
+    }
+-------------------------------------------------------------
+6)
+vector<int> sumTriangles(const vector<vector<int> >& matrix, int n)
+    {
+        // code here>
+        vector<int>v;
+        int sum1=0;
+   
+        for(int i=0;i<matrix.size();i++)
+        {
+            for(int j=0;j<matrix[i].size();j++)
+            {
+                if(j >= i) 
+                    sum1 = sum1 + matrix[i][j];
+            }
+        }
+        v.push_back(sum1);
+        int sum2 =0;
+        
+        for(int i=0;i<matrix.size();i++)
+        {
+            for(int j=0;j<matrix[i].size();j++)
+            {
+                if(i >= j) 
+                    sum2 = sum2 + matrix[i][j];
+            }
+        }
+        v.push_back(sum2);
+        return v;
+    }
