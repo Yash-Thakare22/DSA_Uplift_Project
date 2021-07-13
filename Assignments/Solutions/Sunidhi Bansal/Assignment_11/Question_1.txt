@@ -1,0 +1,9 @@
+//Q1)
+def isSparse(self,n):
+        while n > 0:
+            if n & 1:
+                p = (n >> 1)
+                if (p & 1):
+                    return False
+            n = n >> 1
+        return True
