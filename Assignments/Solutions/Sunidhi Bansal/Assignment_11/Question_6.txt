@@ -1,0 +1,18 @@
+def sumTriangles(self,matrix, n):
+        sum_lower_triangular_matrix = 0
+        sum_upper_triangular_matrix = 0
+        sum = []
+        for i in range(n):
+            for j in range(n):
+                if i > j:
+                    sum_lower_triangular_matrix += matrix[i][j]
+                elif i < j:
+                    sum_upper_triangular_matrix += matrix[i][j]
+                else:
+                    sum_lower_triangular_matrix += matrix[i][j]
+                    sum_upper_triangular_matrix += matrix[i][j]
+        
+        sum.append(sum_upper_triangular_matrix)
+        sum.append(sum_lower_triangular_matrix)
+        
+        return sum

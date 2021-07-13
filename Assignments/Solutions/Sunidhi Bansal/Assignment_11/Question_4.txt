@@ -1,0 +1,15 @@
+//Q4)
+
+class Solution
+{
+    public:
+    //Function to check if the given pattern exists in the given string or not.
+    bool search(string pat, string txt) 
+    { 
+        int pos = txt.find(pat);
+        if(pos != -1) {
+            return true;
+        }
+        return false;
+    } 
+};
