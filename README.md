@@ -36,7 +36,7 @@ Step :seven:: Then create a pull request.</br>
 
 :diamonds: https://www.interviewbit.com/practice/
 
-<h2 align="center"> Resources 📢 </h2>
+<h2 align="center"> Curated Resources For Practice 📢 </h2>
 
 :diamonds: https://techdose.co.in/7-days-dsa-cheat-sheet-quick-preparation-plan/
 
