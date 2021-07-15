@@ -1,0 +1,36 @@
+/******************************************************************************
+
+Question 5
+Write a program to add one to a given number. You are allowed to use only bitwise operator
+
+I/P:
+30
+
+O/P:
+31
+
+*******************************************************************************/
+#include <iostream>
+using namespace std;
+
+int
+addOne (int x)
+{
+  int y = 1;
+  while (x & y)
+    {
+      x = x ^ y;
+      y <<= 1;
+    }
+  x = x ^ y;
+  return x;
+}
+
+int
+main ()
+{
+  int x;
+  cin >> x;
+  cout << x << " + 1 = " << addOne (x);
+  return 0;
+}
