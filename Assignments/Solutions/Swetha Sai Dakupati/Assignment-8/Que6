@@ -1,0 +1,17 @@
+  /*         
+           GEEKSFORGEEKS QUESTIONS ON TOPICS COVERED TILL NOW 
+									    (REVISION)
+
+	BIT MANIPULATION : https://practice.geeksforgeeks.org/problems/odd-or-even3618/1 (DO IT WITH BIT MANIPULATION CONCEPT ONLY)
+  
+  */
+ 
+ class Solution{   
+public:
+    string oddEven(int N){
+        // code here 
+        int n=N ^ 1;
+        if(n==N+1) return "even";
+        else return "odd";
+    }
+};
