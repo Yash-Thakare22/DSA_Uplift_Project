@@ -1,0 +1,22 @@
+  /*
+  GEEKSFORGEEKS QUESTIONS ON TOPICS COVERED TILL NOW 
+									    (REVISION)
+
+
+	SORTING          : https://practice.geeksforgeeks.org/problems/at-least-two-greater-elements4625/1
+  
+  */
+  class Solution{
+    public:
+        vector<int> findElements(int a[], int n)
+    {
+        sort(a,a+n);
+    vector<int>ans;
+    for (int i = 0; i < n-2; i++)
+        ans.push_back(a[i]);
+    
+    return ans;
+        
+        
+    }
+};
