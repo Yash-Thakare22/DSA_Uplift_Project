@@ -1,0 +1,34 @@
+/******************************************************************************
+Question 4
+https://www.geeksforgeeks.org/decimal-binary-number-using-recursion/
+
+Decimal to binary using recursion
+
+*******************************************************************************/
+#include <iostream>
+using namespace std;
+void
+DeciToBin (int x, string & bin)
+{
+  if (x <= 1)
+    bin += (char) (x + '0');
+  else
+    {
+      DeciToBin (x / 2, bin);
+      if (x % 2)
+	bin += '1';
+      else
+	bin += '0';
+    }
+}
+
+int
+main ()
+{
+  int n;
+  cin >> n;
+  string b;
+  DeciToBin (n, b);
+  cout << "bin(" << n << ")= " << b;
+  return 0;
+}

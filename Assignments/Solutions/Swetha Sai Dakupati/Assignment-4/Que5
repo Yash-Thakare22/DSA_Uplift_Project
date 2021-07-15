@@ -1,0 +1,55 @@
+/******************************************************************************
+
+
+Question 5
+
+Given two strings, write program to check whether two given strings are anagram of each other or not
+An anagram of a string is another string that contains the same characters, only the order of characters can be different
+
+I/P:
+str1="triangle" , str2="integral"
+O/P:
+Yes. Two strings are anagram of each other
+
+*******************************************************************************/
+
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+int
+main ()
+{
+  string s1, s2;
+  cin >> s1;
+  cin >> s2;
+  int i, freq[256] = { 0 };
+  int l1 = s1.size ();
+  int l2 = s2.size ();
+  for (i = 0; i < l1 && i < l2; i++)
+    {
+      freq[s1[i]]++;
+      freq[s2[i]]--;
+    }
+  if (i < l1 || i < l2)
+    {
+      cout << s1 << " and " << s2 << " are not anagrams.";
+      return 0;
+    }
+  int flag = 1;
+  for (i = 0; i < 256; i++)
+    {
+      if (freq[i] == 0)
+	continue;
+      else
+	{
+	  flag = 0;
+	  break;
+	}
+    }
+  if (flag == 0)
+    cout << s1 << " and " << s2 << " are not anagrams.";
+  else
+    cout << s1 << " and " << s2 << " are anagrams.";
+  return 0;
+}

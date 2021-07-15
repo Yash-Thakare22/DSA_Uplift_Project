@@ -1,0 +1,26 @@
+/******************************************************************************
+Question 1
+https://www.geeksforgeeks.org/program-for-factorial-of-a-number/
+
+Factorial of a number using recursion
+
+*******************************************************************************/
+#include <iostream>
+using namespace std;
+
+unsigned int
+fact (int n)
+{
+  if (n == 0)
+    return 1;
+  return n * fact (n - 1);
+}
+
+int
+main ()
+{
+  int n;
+  cin >> n;
+  cout << n << "!= " << fact (n);
+  return 0;
+}
