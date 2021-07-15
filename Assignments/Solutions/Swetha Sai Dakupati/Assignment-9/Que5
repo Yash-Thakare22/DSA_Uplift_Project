@@ -1,0 +1,15 @@
+/*
+	LEETCODE QUESTIONS ON TOPICS COVERED TILL NOW
+							(REVISION)
+              
+			BIT MANIPULATION : https://leetcode.com/problems/decode-xored-array/
+  */
+  
+class Solution:
+    def decode(self, encoded: List[int], first: int) -> List[int]:
+        arr=[first,]
+        l=len(encoded)
+        for i in range(l):
+            x=arr[-1]
+            arr.append(encoded[i] ^ x)
+        return arr
