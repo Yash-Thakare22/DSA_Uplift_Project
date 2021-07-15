@@ -1,0 +1,16 @@
+//Q3) 
+
+def leaders(self, A, N):
+        max = A[-1]
+        leader = []
+        leader.append(max)
+        i = N - 2
+        while i >= 0:
+            if max <= A[i]:
+                leader.append(A[i])
+                max = A[i]
+            i -= 1
+        leader = leader[::-1]
+        # leader.sort(reverse = True)
+        return leader
+        #Code here
