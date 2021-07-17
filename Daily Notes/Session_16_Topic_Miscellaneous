@@ -1,0 +1,28 @@
+Interpolation Search
+To find the position to be searched, it uses following formula
+
+pos = lo + [ (x-arr[lo])*(hi-lo) / (arr[hi]-arr[lo]) ]
+
+where,
+arr[] ==> Array where elements need to be searched
+x     ==> Element to be searched
+lo    ==> Starting index in arr[]
+hi    ==> Ending index in arr[]
+
+General equation of line : y = m*x + c
+(x,y)=(index, corresponding ele at index)
+
+arr[hi] = m*hi+c ----(1)
+arr[lo] = m*lo+c ----(2)
+x = m*pos + c     ----(3)
+
+m = (arr[hi] - arr[lo] )/ (hi - lo)
+
+subtracting eqxn (2) from (3)
+x - arr[lo] = m * (pos - lo)
+lo + (x - arr[lo])/m = pos
+pos = lo + (x - arr[lo]) *(hi - lo)/(arr[hi] - arr[lo])
+
+
+Counting Sort
+https://www.geeksforgeeks.org/counting-sort/
