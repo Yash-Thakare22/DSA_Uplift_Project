@@ -51,6 +51,16 @@ Step :seven:: Then create a pull request.</br>
 
 :diamonds: [Facebook Hacker Cup](https://www.facebook.com/codingcompetitions/hacker-cup/)
 
+<h2 align="center"> Other Imp Links :white_check_mark: </h2>
+
+:diamonds: [General Interview Handbook](https://techinterviewhandbook.org/introduction)
+
+:diamonds: [Coding Interview Patterns](https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed)
+
+:diamonds: [Best YouTube Channels for Coding](https://docs.google.com/document/d/1gci5kyvvCgJNCDn3jKPJ4QeUJV-cYRcyZEvL5ucaIl4/edit)
+
+:diamonds: [Data Structure & Algorithms Visualizations](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
+
 <h2 align="center"> Mentors :technologist: </h2>
 <h3>:man_technologist: Yash Thakare <a href="https://linkedin.com/in/yashthakare" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="Yash Thakare" height="20" width="40" /></a> </h3> 
 
