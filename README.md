@@ -41,7 +41,7 @@ Step :seven:: Then create a pull request.</br>
 
 :diamonds: https://www.pepcoding.com/most-important-interview-questions-list-for-product-based-companies
 
-<h2 align="center"> Online Coding Competitions :technologist: </h2>
+<h2 align="center"> Online Coding Competitions :heavy_check_mark: </h2>
 
 :diamonds: [Google Kickstart](https://codingcompetitions.withgoogle.com/kickstart)
 
