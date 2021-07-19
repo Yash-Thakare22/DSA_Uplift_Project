@@ -43,13 +43,13 @@ Step :seven:: Then create a pull request.</br>
 
 <h2 align="center"> Online Coding Competitions :technologist: </h2>
 
-- [Google Kickstart](https://codingcompetitions.withgoogle.com/kickstart)
+:diamonds: [Google Kickstart](https://codingcompetitions.withgoogle.com/kickstart)
 
-- [Google Hash Code](https://codingcompetitions.withgoogle.com/hashcode/)
+:diamonds: [Google Hash Code](https://codingcompetitions.withgoogle.com/hashcode/)
 
-- [Google Code Jam](https://codingcompetitions.withgoogle.com/codejam)
+:diamonds: [Google Code Jam](https://codingcompetitions.withgoogle.com/codejam)
 
-- [Facebook Hacker Cup](https://www.facebook.com/codingcompetitions/hacker-cup/)
+:diamonds: [Facebook Hacker Cup](https://www.facebook.com/codingcompetitions/hacker-cup/)
 
 <h2 align="center"> Mentors :technologist: </h2>
 <h3>:man_technologist: Yash Thakare <a href="https://linkedin.com/in/yashthakare" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="Yash Thakare" height="20" width="40" /></a> </h3> 
