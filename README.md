@@ -51,7 +51,7 @@ Step :seven:: Then create a pull request.</br>
 
 :diamonds: [Facebook Hacker Cup](https://www.facebook.com/codingcompetitions/hacker-cup/)
 
-<h2 align="center"> Other Imp Links :white_check_mark: </h2>
+<h2 align="center"> Other Imp Links :100: </h2>
 
 :diamonds: [General Interview Handbook](https://techinterviewhandbook.org/introduction)
 
