@@ -15,7 +15,7 @@ class Solution{
             {
                 res += S[j];
             }
-            res[i]='.';
+            S[i]='.';
         }
         return res;
     }
