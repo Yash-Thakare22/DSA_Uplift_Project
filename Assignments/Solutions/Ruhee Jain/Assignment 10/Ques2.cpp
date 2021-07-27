@@ -9,7 +9,6 @@ https://www.geeksforgeeks.org/recursive-programs-to-find-minimum-and-maximum-ele
 #include <iostream>
 using namespace std;
  
-
 int findMinEle(int A[], int n)
 {
     if (n == 1)
@@ -17,11 +16,18 @@ int findMinEle(int A[], int n)
     return min(A[n-1], findMinEle(A, n-1));
 }
  
+int findMaxEle(int A[], int n)
+{
+    if (n == 1)
+        return A[0];
+    return max(A[n-1], findMaxEle(A, n-1));
+}
 
 int main()
 {
     int arr[] = {1, 4, 45, 6, -50, 10, 2};
     int n = sizeof(arr)/sizeof(arr[0]);
-    cout <<  findMinEle(arr, n);
+    cout << findMinEle(arr, n) << endl;
+    cout << findMaxEle(arr,n);
     return 0;
 }
