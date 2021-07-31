@@ -7,7 +7,6 @@ https://practice.geeksforgeeks.org/problems/number-is-sparse-or-not-1587115620/1
 */
 
 
-
 #include<iostream>
 using namespace std;
 
