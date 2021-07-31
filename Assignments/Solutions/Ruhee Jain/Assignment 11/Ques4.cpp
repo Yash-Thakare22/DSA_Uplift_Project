@@ -6,7 +6,6 @@ https://practice.geeksforgeeks.org/problems/distinct-pattern-search-1587115620/1
 
 */
 
-
 #include<bits/stdc++.h> 
 using namespace std; 
 
@@ -29,7 +28,6 @@ int main()
 	
 	int t;
 	cin >> t;
-	
 	while(t--){
 	    string s, p;
 	    cin >> s >> p;
