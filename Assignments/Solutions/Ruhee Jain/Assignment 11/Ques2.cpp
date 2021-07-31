@@ -6,7 +6,6 @@ https://practice.geeksforgeeks.org/problems/equilibrium-point-1587115620/1/?trac
 
 */
 
-
 #include <iostream>
 using namespace std;
 
