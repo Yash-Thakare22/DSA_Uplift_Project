@@ -1,0 +1,268 @@
+https://www.geeksforgeeks.org/program-for-factorial-of-a-number/
+*/
+#include <bits/stdc++.h>
+using namespace std;
+class Solution
+{
+public:
+    long long int factorial(int N)
+    {
+
+        if (N <= 1)
+            return 1;
+        return N * factorial(N - 1);
+    }
+};
+int main()
+{
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        int N;
+        cin >> N;
+        Solution ob;
+        cout << ob.factorial(N) << endl;
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://www.geeksforgeeks.org/recursive-programs-to-find-minimum-and-maximum-elements-of-array/
+*/
+#include <bits/stdc++.h>
+using namespace std;
+
+int minimum(int a[], int n)
+{
+    if (n == 1)
+        return a[n - 1];
+    return (min(a[n - 1], minimum(a, n - 1)));
+}
+int maximum(int a[], int n)
+{
+    if (n == 1)
+        return a[n - 1];
+    return max(a[n - 1], maximum(a, n - 1));
+}
+int main()
+{
+    int element, i = 0, n;
+    cin >> n;
+    int a[n];
+    while (cin >> element)
+    {
+        a[i] = element;
+        i++;
+    }
+    int p = minimum(a, n);
+    int q = maximum(a, n);
+    cout << "The minimum number of the array is " << p << " The maximum number of this array is " << q;
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://www.geeksforgeeks.org/recursive-bubble-sort/
+*/
+#include <iostream>
+using namespace std;
+void sort(int a[], int n)
+{
+    int temp;
+    if (n == 1)
+        return;
+    for (int i = 0; i < n - 1; i++)
+    {
+        if (a[i] > a[i + 1])
+        {
+            temp = a[i + 1];
+            a[i + 1] = a[i];
+            a[i] = temp;
+        }
+    }
+    sort(a, n - 1);
+}
+void print(int a[], int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        cout << a[i] << " ";
+    }
+}
+int main()
+{
+    int n;
+    cin >> n;
+    int a[n];
+    for (int i = 0; i < n; i++)
+    {
+        cin >> a[i];
+    }
+    sort(a, n);
+    print(a, n);
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://www.geeksforgeeks.org/decimal-binary-number-using-recursion/
+*/
+#include <bits/stdc++.h>
+#include <string>
+using namespace std;
+string decimal(int n)
+{
+
+    string p = to_string(n % 2);
+    if (n <= 1)
+        return p;
+    return decimal(n / 2) + p;
+}
+int main()
+{
+    int n;
+    cin >> n;
+    string str = decimal(n);
+    cout << str;
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://www.geeksforgeeks.org/recursive-program-prime-number/
+*/
+#include <bits/stdc++.h>
+#include <string>
+using namespace std;
+bool prime_number(int n, int i = 2)
+{
+    if (n <= 2)
+        return false;
+
+    if (n % i == 0)
+        return false;
+    if (i * i > n)
+        return true;
+    prime_number(n, i + 1);
+}
+int main()
+{
+    int n;
+    cin >> n;
+    if (prime_number(n))
+        cout << "It is a prime number";
+    else
+        cout << "It is not a prime number";
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://www.geeksforgeeks.org/print-given-pattern-recursively/
+*/
+#include <bits/stdc++.h>
+#include <string>
+using namespace std;
+void pattern(int n)
+{
+    if (n == 1)
+    {
+        cout << '*';
+        return;
+    }
+    for (int i = 0; i < n; i++)
+        cout << '*' << " ";
+    cout << endl;
+    pattern(n - 1);
+}
+int main()
+{
+    int n;
+    cin >> n;
+    pattern(n);
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

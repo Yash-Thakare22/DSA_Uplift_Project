@@ -1,0 +1,166 @@
+// https://leetcode.com/problems/two-sum/
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        unordered_map<int,int> m;
+        vector<int> v(2);       
+        for(int i=0,n=nums.size();i<n;i++){
+            if(m.find(target-nums[i]) != m.end()){
+                v[0] =i;
+                v[1]=m[target-nums[i]];
+                break;
+            }
+            m[nums[i]] =i;
+        }
+        return v;
+    }
+};
+
+
+
+
+
+
+
+
+
+
+// https://leetcode.com/problems/roman-to-integer/
+class Solution
+{
+public:
+    int romanToInt(string s)
+    {
+        unordered_map<char, int> mp;
+        mp.insert({'I', 1});
+        mp.insert({'V', 5});
+        mp.insert({'X', 10});
+        mp.insert({'L', 50});
+        mp.insert({'C', 100});
+        mp.insert({'D', 500});
+        mp.insert({'M', 1000});
+        int n = s.size();
+        int ans = mp[s.back()];
+        for (int i = n - 2; i >= 0; --i)
+        {
+            char s1 = s[i];
+            char s2 = s[i + 1];
+            if (mp[s1] < mp[s2])
+            {
+                ans -= mp[s1];
+            }
+            else
+            {
+                ans += mp[s1];
+            }
+        }
+        return ans;
+    }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// https://leetcode.com/problems/longest-substring-without-repeating-characters/
+class Solution
+{
+public:
+    int lengthOfLongestSubstring(string s)
+    {
+        int n = s.length();
+        if (n == 0)
+            return 0;
+        int j = 0;
+        int maxi = INT_MIN;
+        vector<int> hash(100, 0);
+        for (int i = 0; i < n; i++)
+        {
+            if (hash[s[i] - ' '] == 0)
+                hash[s[i] - ' ']++;
+            else
+            {
+                while (hash[s[i] - ' '])
+                {
+                    hash[s[j] - ' ']--;
+                    j++;
+                }
+                hash[s[i] - ' ']++;
+            }
+            maxi = max(maxi, i - j + 1);
+        }
+        return maxi;
+    }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// https://leetcode.com/problems/integer-to-roman/
+class Solution
+{
+public:
+    string intToRoman(int num)
+    {
+        map<int, string> m{{1, "I"}, {4, "IV"}, {5, "V"}, {9, "IX"}, {10, "X"}, {40, "XL"}, {50, "L"}, {90, "XC"}, {100, "C"}, {400, "CD"}, {500, "D"}, {900, "CM"}, {1000, "M"}};
+        string res = "";
+        while (num != 0)
+        {
+            auto it = m.upper_bound(num);
+            it--;
+            res += (it->second);
+            num = num - (it->first);
+        }
+        return res;
+    }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

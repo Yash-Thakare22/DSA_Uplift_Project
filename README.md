@@ -1,14 +1,32 @@
 # DSA_Uplift_Project Batch 1
 
+<div align="center">
+
+<a href="https://github.com/YashThakare/DSA_Uplift_Project"><img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103"></a>
+<a href="https://github.com/YashThakare/DSA_Uplift_Project"><img src="https://img.shields.io/badge/Built%20by-developers%20%3C%2F%3E-0059b3"></a>
+<a href="https://github.com/YashThakare/DSA_Uplift_Project"><img src="https://img.shields.io/static/v1.svg?label=Contributions&message=Welcome&color=yellow"></a>
+<a href="https://github.com/YashThakare/"><img src="https://img.shields.io/badge/Maintained%3F-yes-brightgreen.svg?v=103"></a>
+<a href="https://github.com/YashThakare/DSA_Uplift_Project/watchers"><img src="https://img.shields.io/github/watchers/YashThakare/DSA_Uplift_Project"></a>
+
+<a href="https://github.com/YashThakare/DSA_Uplift_Project/graphs/contributors"><img src="https://img.shields.io/github/contributors/YashThakare/DSA_Uplift_Project?color=brightgreen"></a>
+<a href="https://github.com/YashThakare/DSA_Uplift_Project/stargazers"><img src="https://img.shields.io/github/stars/YashThakare/DSA_Uplift_Project?color=0059b3"></a>
+<a href="https://github.com/YashThakare/DSA_Uplift_Project/network/members"><img src="https://img.shields.io/github/forks/YashThakare/DSA_Uplift_Project?color=yellow"></a>
+<a href="https://github.com/YashThakare/DSA_Uplift_Project/issues"><img src="https://img.shields.io/github/issues/YashThakare/DSA_Uplift_Project?color=0059b3"></a>
+<a href="https://github.com/YashThakare/DSA_Uplift_Project/issues?q=is%3Aissue+is%3Aclosed"><img src="https://img.shields.io/github/issues-closed-raw/YashThakare/DSA_Uplift_Project?color=yellow"></a>
+<a href="https://github.com/YashThakare/DSA_Uplift_Project/pulls"><img src="https://img.shields.io/github/issues-pr/YashThakare/DSA_Uplift_Project?color=brightgreen"></a>
+<a href="https://github.com/YashThakare/DSA_Uplift_Project/pulls?q=is%3Apr+is%3Aclosed"><img src="https://img.shields.io/github/issues-pr-closed-raw/YashThakare/DSA_Uplift_Project?color=0059b3"></a> 
+</div>
+
 <h2 align="center"> How to submit the assignment :question: </h2>
 
 Step :one:: Fork the repository.</br>
-Step :two:: Goto problems folder.</br>
-Step :three:: Then goto solutions folder.</br>
-Step :four:: Inside you name folder, create a folder by name of Assignment No.</br>
-Step :five:: Create a file inside the folder you created in step 4.</br>
-Step :six:: Copy and Paste the code you have written, in file created in step 5.</br>
-Step :seven:: Then create a pull request.</br>
+Step :two:: Goto assignments folder.</br>
+Step :three:: Goto problems folder.</br>
+Step :four:: Then goto solutions folder.</br>
+Step :five:: Inside you name folder, create a folder by name of Assignment No.</br>
+Step :six:: Create a file inside the folder you created in step 4.</br>
+Step :seven:: Copy and Paste the code you have written, in file created in step 5.</br>
+Step :eight:: Then create a pull request.</br>
 </br>
 
 <h3> Note: The file name should be Question_No. and create a separate file for each question.</h3> <br>
