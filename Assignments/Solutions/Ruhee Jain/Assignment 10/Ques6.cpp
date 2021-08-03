@@ -9,7 +9,6 @@ https://www.geeksforgeeks.org/print-given-pattern-recursively/
 
 #include <iostream>
 using namespace std;
- 
 
 void printPattern(int n, int i)
 {
