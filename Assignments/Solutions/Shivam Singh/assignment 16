@@ -1,0 +1,384 @@
+#include <stack>
+class Solution {
+public:
+    bool isValid(string s) {
+        stack<char> t;
+        for (int i = 0; i < s.length(); i++) {
+            if (s[i] == '(' || s[i] == '{' || s[i] == '[') {
+                t.push(s[i]);
+            }
+            else {
+                if (t.size() == 0) {
+                    return false;
+                }
+                else {
+                    if (s[i] == ')' && t.top() == '(') {
+                        t.pop();
+                    }
+                    else if (s[i] == '}' && t.top() == '{') {
+                        t.pop();
+                    }
+                    else if (s[i] == ']' && t.top() == '[') {
+                        t.pop();
+                    }
+                    else {
+                        return false;
+                    }
+                }
+            }
+        }
+        if(t.size() == 0) {
+            return true;    
+        }
+        return false;
+    }
+}; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Solution {
+public: 
+    vector<int> nearest_greatest_integer(vector<int>& nums2) {
+        vector<int> output;
+        stack<int> s;
+        for (int i = nums2.size() - 1; i >= 0; i--) {
+            if (s.size() == 0) {
+                output.push_back(-1);
+            }
+            else if (s.size() != 0 && nums2[i] < s.top()) {
+                output.push_back(s.top());
+            }
+            else if(s.size() != 0 && nums2[i] >= s.top()) {
+                while(s.size() != 0 && nums2[i] >= s.top()) {
+                    s.pop();
+                }
+
+                if(s.size() == 0) {
+                    output.push_back(-1);    
+                }
+                else {
+                    output.push_back(s.top());
+                }
+            }
+            s.push(nums2[i]);
+        }   
+
+        reverse(output.begin(),output.end());
+        return output;
+    }
+
+    vector<int> nextGreaterElement(vector<int>& nums1, vector<int>& nums2) {
+        vector<int> output;
+        vector<int> greatest_int_to_right = nearest_greatest_integer(nums2);
+        for (int i = 0; i < nums1.size(); i++) {
+            for (int j = 0; j < nums2.size(); j++) {
+                if(nums1[i] == nums2[j]) {
+                    output.push_back(greatest_int_to_right[j]);
+                }
+            }
+        }
+        return output;
+    }
+}; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class MyQueue {
+public:
+    /** Initialize your data structure here. */
+    stack<int> input;
+    stack<int> output;
+    MyQueue() {
+        input = {};
+        output = {};
+    }
+
+    /** Push element x to the back of queue. */
+    void push(int x) {
+        input.push(x);
+    }
+
+    /** Removes the element from in front of queue and returns that element. */
+    int pop() {
+        if(output.size() != 0) {
+            int front = output.top();
+            output.pop();
+            return front;
+        } else {
+            if(input.size() == 0) {
+                return -1;
+            } else {
+                while(input.size() != 0) {
+                output.push(input.top());
+                input.pop();
+                }
+                int front = output.top();
+                output.pop();
+                return front;
+            }
+
+        }
+    }
+
+    /** Get the front element. */
+    int peek() {
+        if(output.size() != 0) {
+            return output.top();
+        } else {
+            if(input.size() == 0) {
+                return -1;
+            } else {
+                while(input.size() != 0) {
+                    output.push(input.top());
+                    input.pop();
+                }
+                return output.top();
+            }
+        }
+
+    }
+
+    /** Returns whether the queue is empty. */
+    bool empty() {
+        return (input.size() == 0 && output.size() == 0);
+    }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class MyStack {
+public:
+    /** Initialize your data structure here. */
+    queue<int> q1;
+    queue<int> q2;
+    MyStack() {
+        q1 = {};
+        q2 = {};
+    }
+
+    /** Push element x onto stack. */
+    void push(int x) {
+        q2.push(x);
+        while(q1.size() != 0) {
+            q2.push(q1.front());
+            q1.pop();
+        }
+        while(q2.size() != 0) {
+            q1.push(q2.front());
+            q2.pop();
+        }
+    }
+
+    /** Removes the element on top of the stack and returns that element. */
+    int pop() {
+        int top = q1.front();
+        q1.pop();
+        return top;
+    } 
+
+    /** Get the top element. */
+    int top() {
+       return q1.front();
+    }
+
+    /** Returns whether the stack is empty. */
+    bool empty() {
+        return (q1.size() == 0);
+    }
+};
+
+/**
+ * Your MyStack object will be instantiated and called as such:
+ * MyStack* obj = new MyStack();
+ * obj->push(x);
+ * int param_2 = obj->pop();
+ * int param_3 = obj->top();
+ * bool param_4 = obj->empty();
+ */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class MinStack {
+public:
+    /** initialize your data structure here. */
+    vector<int> stack;
+    vector<int> arr;
+    MinStack() {
+        stack = {};
+        arr = {};
+    }
+
+    void push(int val) {
+        stack.push_back(val);
+        arr.push_back(val);
+    }
+
+    void pop() {
+        if(stack.size() != 0) {
+            stack.pop_back();    
+        }
+    }
+
+    int top() {
+        if(stack.size() != 0) {
+            return stack[stack.size() - 1];
+        }
+        return -1;
+    }
+
+    int getMin() {
+        if(stack.size() != 0) {
+            int min = stack[0];
+            for(int i = 0; i < stack.size(); i++) {
+                if(min > stack[i]) {
+                    min = stack[i];
+                }
+            }
+            return min;
+        }
+        return -1;
+    }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Solution {
+public:
+    string remove_backspaced_character(string str) {
+        stack<char> s;
+        for (int i = 0; i < str.length(); i++) {
+            //cout<<"loop: "<<i<<" "<<str[i]<<endl;
+            if ((str[i] == '#') && (s.size() != 0)) {
+                s.pop();
+            }
+            else if (str[i] != '#') {
+                s.push(str[i]);
+                //cout<<s.size()<<endl;
+            }
+        }
+
+        string new_str = "";
+        while(s.size() != 0) {
+            new_str += s.top();
+            s.pop();
+        }
+
+    reverse(new_str.begin(), new_str.end());
+
+    return new_str;
+
+    }
+
+    bool backspaceCompare(string s, string t) {
+        s = remove_backspaced_character(s);
+        t = remove_backspaced_character(t);
+
+        return t == s;
+    }
+}; 
