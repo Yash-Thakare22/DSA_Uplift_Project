@@ -1,0 +1,43 @@
+/****************************************************************************
+ 
+ Question 1
+
+Given an array arr[] of size N, the task is to sort the array in ascending order
+
+I/P: 
+6
+0 9 4 10 7 8
+O/P:
+0 4 7 8 9 10
+
+*******************************************************************************/
+// Adaptive bubble sort
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+    int a[n];
+    for(int i=0;i<n;i++) cin>>a[i];
+    int flag,i,j;
+    cout<<"Given array : ";
+    for(i=0;i<n;i++) cout<<a[i]<<" ";
+    cout<<endl;
+    for(i=0;i<n-1;i++){
+        flag=0;
+        for(j=0;j<n-i-1;j++){
+            if(a[j]>a[j+1]){
+                int temp=a[j];
+                a[j]=a[j+1];
+                a[j+1]=temp;
+                flag=1;
+            }
+        }
+        if(flag==0) break; 
+    }
+    cout<<"Given array after sorting : ";
+    for(i=0;i<n;i++) cout<<a[i]<<" ";
+    return 0;
+}

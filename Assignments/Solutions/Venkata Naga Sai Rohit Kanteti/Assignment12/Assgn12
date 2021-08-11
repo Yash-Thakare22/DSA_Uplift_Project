@@ -1,0 +1,200 @@
+1)int Solution::firstMissingPositive(vector<int> &A) {
+vector<int>  V;
+
+for(int i=0;i<A.size();i++)
+
+{
+
+V.push_back(A[i]);
+
+}
+
+sort(V.begin(),V.end());
+
+int num,pos=0;
+
+int x = 1;
+
+for(int i=0;i<V.size();i++)
+
+{
+
+if(V[i]<0){
+
+continue;
+
+}
+
+else if(V[i]>0){
+
+pos = 1;
+
+if(V[i]!=x){
+
+return x;
+
+}
+
+else{
+
+x++;
+
+}
+
+}
+
+}
+
+if(pos==0){
+
+return 1;
+
+}
+
+else{
+
+return x;
+
+}
+
+}
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2)
+int Solution::coverPoints(vector<int> &A, vector<int> &B) {
+      int steps = 0;
+    
+    for(int i=0; i<A.size()-1; i++){
+        
+        int dx = A[i+1] - A[i];
+		int dy = B[i+1] - B[i];
+			dx= abs(dx);
+			dy = abs(dy);
+		
+			
+			
+	   steps += max(dx,dy);
+			
+    }
+    return abs(steps);
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3)
+int Solution::titleToNumber(string A) {
+    int len = A.size(),colNum=0;
+
+    for(int i=0;i<len;i++)
+    {
+        colNum = (colNum*26) + ((A[i]-'A')+1);
+    }
+    return colNum;
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4)
+int Solution::trailingZeroes(int A) {
+
+    int zeros=0;
+
+    for(int i=5;A/i>=1;i*=5)
+    { 
+        zeros+=A/i;
+    }
+    return zeros;
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+5)
+int Solution::sqrt(int A) {
+
+long long l=1,h=A,mid;
+
+while(l<=h)
+
+{
+
+mid=l+(h-l)/2;
+
+if(mid*mid==A)
+
+{
+
+return mid;
+
+}
+
+else if(mid*mid>A)
+
+{
+
+h=mid-1;
+
+}
+
+else
+
+{
+
+l=mid+1;
+
+}
+
+}
+
+return h;
+
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+6)
+int digit(char c){
+        switch(c){
+            case 'I':{return 1;
+                break;}
+                case 'V':{return 5;
+                break;}
+                case 'X':{return 10;
+                break;}
+                case 'L':{return 50;
+                break;}
+                case 'C':{return 100;
+                break;}
+                case 'D':{return 500;
+                break;}
+                case 'M':{return 1000;
+                break;}     
+        } 
+       return -1;
+    }
+
+int Solution::romanToInt(string s) {
+    
+        int res =0;
+        for(int i =0;i<s.length();i++){
+          int x1 = digit(s[i]);
+            if(i+1<s.length()){
+                int x2 = digit(s[i+1]);
+                if(x1>=x2) res =res+x1;
+                else {
+                    res = res+x2-x1;
+                    i++;
+                }
+                
+                
+            }
+            else res = res+x1;  
+        }
+        return res;
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+7)
+int Solution::findMinXor(vector<int> &A) {
+    sort(A.begin(),A.end());
+int min=INT_MAX; 
+int val;
+for(int i=0;i<A.size()-1;i++)
+{
+    val=A[i]^A[i+1];
+    if(val<min)
+        min=val;
+}
+return min;
+}

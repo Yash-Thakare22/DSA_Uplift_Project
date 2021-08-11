@@ -1,0 +1,20 @@
+/*
+	   LEETCODE QUESTIONS ON TOPICS COVERED TILL NOW
+							(REVISION)
+	
+			SORTING          : https://leetcode.com/problems/shuffle-string/
+      
+ */
+ 
+class Solution {
+public:
+    string restoreString(string s, vector<int>& indices) {
+        int i,l=s.length();
+        string ans=s;
+        for(i=0;i<l;i++){
+            ans[indices[i]]=s[i];
+            
+        }
+        return ans;
+    }
+};

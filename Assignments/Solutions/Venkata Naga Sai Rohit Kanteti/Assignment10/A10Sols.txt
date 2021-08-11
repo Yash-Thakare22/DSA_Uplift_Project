@@ -1,0 +1,71 @@
+1)
+long long int factorial(int n){
+       //code here
+       if(n==1 || n==0) return 1;
+       else return n*factorial(n-1);
+}
+-----------------------------------------------------------
+
+2)
+int findMin(int A[], int n)
+{
+    if (n == 1)
+        return A[0];
+    return min(A[n-1], findMin(A, n-1));
+}
+ 
+int findMax(int A[], int n)
+{
+    if (n == 1)
+        return A[0];
+    return max(A[n-1], findMax(A, n-1));
+}
+------------------------------------------------------------
+3)
+void bubble(int arr[], int n)
+{
+    
+    if (n == 1)
+        return;
+ 
+    for (int i=0; i<n-1; i++)
+        if (arr[i] > arr[i+1])
+            swap(arr[i], arr[i+1]);
+ 
+    bubble(arr, n-1);
+}
+--------------------------------------------------------------
+4)
+int binary(int decimal)
+{
+    if (decimal == 0)
+        return 0;
+    else
+        return (decimal % 2 + 10 *binary(decimal/ 2));
+}
+---------------------------------------------------------------
+5)
+bool isPrime(int n, int i = 2)
+{
+    
+    if (n <= 2)
+        return (n == 2) ? true : false;
+    if (n % i == 0)
+        return false;
+    if (i * i > n)
+        return true;
+ 
+    return isPrime(n, i + 1);
+}
+----------------------------------------------------------------
+6)
+void print(int n)
+{
+   
+    if (n < 1)
+        return;
+  
+    cout << "* ";
+    print(n-1);
+}
+ 

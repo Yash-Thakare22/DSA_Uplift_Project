@@ -1,0 +1,22 @@
+//sum of upper & lower triangular matrix
+#include <iostream>
+using namespace std;
+int main() {
+    int n,u=0,l=0;cin>>n;
+    int a[n][n];
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++)
+            cin>>a[i][j];
+    }
+    for(int i=0;i<n;i++){
+        for(int j=0;j<=i;j++)
+            l+=a[i][j];
+    }
+    for(int i=0;i<n;i++){
+        for(int j=i;j<n;j++)
+            u+=a[i][j];
+    }
+    cout<<"upper sum: "<<u<<endl;
+    cout<<"lower sum: "<<l;
+    return 0;
+}

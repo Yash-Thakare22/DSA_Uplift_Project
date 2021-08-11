@@ -1,0 +1,20 @@
+// https://www.geeksforgeeks.org/print-given-pattern-recursively/
+#include <iostream>
+using namespace std;
+void printline(int n){
+    if(n<1)return ;
+    cout<<"*";
+    printline(n-1);
+}
+void printdesgin(int n){
+    if(n<1)return ;
+    printline(n);
+    cout<<endl;
+    printdesgin(n-1);
+}
+int main(){
+    int n = 6;
+    printdesgin(n);
+
+    return 0;
+}

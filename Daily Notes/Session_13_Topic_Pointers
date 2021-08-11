@@ -1,0 +1,16 @@
+https://www.geeksforgeeks.org/pointers-in-c-and-c-set-1-introduction-arithmetic-and-array/
+
+https://www.geeksforgeeks.org/passing-by-pointer-vs-passing-by-reference-in-c/
+
+Various way of representation:-
+1D Array
+
+*(&a[i])=*(a+i)=a[i]
+
+a[i]=*(a+i)=*(i+a)=i[a]
+
+2D Array
+
+*(*(a+i)+j)=*(a[i]+j)=(*(a+i))[j]=a[i][j]
+
+*(a+i)+j=a[i]+j=&a[i][j]

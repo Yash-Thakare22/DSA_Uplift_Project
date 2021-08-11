@@ -1,0 +1,50 @@
+/******************************************************************************
+
+Question 3:Given a sorted array of size N and an integer K. Check if K is present in the array or not.
+Example 1:
+Input:
+N = 5, K = 6
+arr[] = {1,2,3,4,6}
+Output: 1
+
+                BinarySearch Recursive
+Time: O(logn)
+
+*******************************************************************************/
+
+#include <stdio.h>
+#include<stdlib.h>
+
+int
+BinarySearch (int a[], int key, int first, int last)
+{
+  if (first > last)
+    return -1;
+  int mid = first + (last - first) / 2;
+  if (a[mid] == key)
+    return mid;
+  else if (a[mid] < key)
+    BinarySearch (a, key, mid + 1, last);
+  else
+    BinarySearch (a, key, first, mid - 1);
+}
+
+int
+main ()
+{
+  int size, key;
+  printf ("Enter size of array : ");
+  scanf ("%d", &size);
+  int array[size];
+  printf ("\nEnter elements of array : ");
+  for (int i = 0; i < size; i++)
+    scanf ("%d", &array[i]);
+  printf ("\nEnter element to be searched : ");
+  scanf ("%d", &key);
+  int idx = BinarySearch (array, key, 0, size - 1);
+  if (idx == -1)
+    printf ("\nElement not found.");
+  else
+    printf ("\nElement found at index : %d", idx);
+  return 0;
+}

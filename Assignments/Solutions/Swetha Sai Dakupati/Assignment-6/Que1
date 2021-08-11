@@ -1,0 +1,45 @@
+/******************************************************************************
+
+Question 1: Given an integer array and another integer element. The task is to find if the given element is present in array or not.
+Example 1:
+Input:
+n = 4
+arr[] = {1,2,3,4}
+x = 3
+Output: 2
+
+*******************************************************************************/
+
+#include <stdio.h>
+#include<stdlib.h>
+
+int
+LinearSearch (int arr[], int key, int size)
+{
+  for (int i = 0; i < size; i++)
+    {
+      if (arr[i] == key)
+	return i;
+    }
+  return -1;
+}
+
+int
+main ()
+{
+  int size, key;
+  printf ("Enter size of array : ");
+  scanf ("%d", &size);
+  int array[size];
+  printf ("\nEnter elements of array : ");
+  for (int i = 0; i < size; i++)
+    scanf ("%d", &array[i]);
+  printf ("\nEnter element to be searched : ");
+  scanf ("%d", &key);
+  int idx = LinearSearch (array, key, size);
+  if (idx == -1)
+    printf ("\nElement not found.");
+  else
+    printf ("\nElement found at index-%d", idx);
+  return 0;
+}

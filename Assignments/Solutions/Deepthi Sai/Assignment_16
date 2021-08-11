@@ -1,0 +1,245 @@
+//Q1
+class Solution {
+public:
+    bool isValid(string s) {
+        stack<char>st;
+        for(int i=0;i<s.size();i++)
+        {
+            if(s[i]=='(' || s[i]=='{' || s[i]=='[')
+                st.push(s[i]);
+            else if(s[i]==')' || s[i]=='}' || s[i]==']')
+            {
+                if(st.empty())
+                {
+                  return false;  
+                }
+                char x= st.top();
+                st.pop();
+                if((s[i]==')' && x=='(') || (s[i]=='}' && x=='{') || ( s[i]==']' && x=='['))
+                    continue;
+                else return false;
+            }
+            
+        }
+        if(!st.empty())return false;
+        return true;
+        
+    }
+};
+
+//Q2
+
+class Solution {
+public:
+    bool isPalindrome(ListNode* head) {
+        stack<int>s;
+        ListNode*temp=head;
+        while(temp!=NULL)
+        {
+            s.push(temp->val);
+            temp=temp->next;
+        }
+        int k= s.size()/2;
+        while(k--)
+        {
+           int x=s.top();
+            s.pop();
+            if((head->val)!=x)
+                return false;
+            head=head->next;
+        }
+        return true;
+    }
+};
+
+//Q3
+class Solution {
+public:
+    vector<int> nextGreaterElement(vector<int>& nums1, vector<int>& nums2) {
+        stack<int>s;
+        vector<int>result;
+        unordered_map<int,int>m;
+        for(int i=0;i<nums2.size();i++)
+        {
+          while(!s.empty() && s.top()<nums2[i])  
+          {
+            m[s.top()]=nums2[i];
+              s.pop();
+          }
+            s.push(nums2[i]);
+        }
+        for(int i=0;i<nums1.size();i++)
+        {
+            if(m.find(nums1[i])!=m.end())
+                result.push_back(m[nums1[i]]);
+            else result.push_back(-1);
+        }
+        return result;
+    }
+};
+
+//Q4
+
+class MyQueue {
+public:
+    stack<int>o,t; 
+    /** Initialize your data structure here. */
+    MyQueue() {
+     
+    }
+    
+    /** Push element x to the back of queue. */
+    void push(int x) {
+        t.push(x); 
+    }
+    
+    void reverse()
+    {
+        if(o.empty())
+        {
+           while(!t.empty())
+           {
+               o.push(t.top());
+               t.pop();
+           }
+        }
+    }
+    
+    /** Removes the element from in front of queue and returns that element. */
+    int pop() {
+        reverse();
+        int c= o.top();
+        o.pop();
+        return c;
+    }
+    
+    /** Get the front element. */
+    int peek() {
+        reverse();
+        return o.top();
+    }
+    
+    /** Returns whether the queue is empty. */
+    bool empty() {
+        return t.empty() && o.empty();
+    }
+};
+
+//Q5
+class MyStack {
+public:
+    /** Initialize your data structure here. */
+    queue<int>t;
+    
+    MyStack() {
+    }
+    
+    /** Push element x onto stack. */
+    void push(int x) {
+        t.push(x);
+    }
+    
+    /** Removes the element on top of the stack and returns that element. */
+    int pop() {
+        vector<int>v;
+         while(!t.empty())
+         {
+             v.push_back(t.front());
+             t.pop();
+         }
+         int temp=v[v.size()-1];
+         
+         for(int i=0;i<v.size()-1;i++)
+         {
+            t.push(v[i]);  
+         }
+       return temp;
+    }
+    
+    /** Get the top element. */
+    int top() {
+       return t.back();
+    }
+    
+    /** Returns whether the stack is empty. */
+    bool empty() {
+        return t.empty() ;
+    }
+};
+
+
+//Q6
+class MinStack {
+public:
+  
+    stack<int>s;
+    stack<int>s1;
+    MinStack() {  
+    }
+    
+    void push(int val) 
+    {
+        if (s.empty() or (val <= getMin()))
+        {
+            s.push(val);
+            s1.push(val);
+        }
+        
+        else 
+        {
+            s.push(val);
+            s1.push(getMin());
+        } 
+        
+    }
+    void pop() {
+        if(!s.empty()){
+        s.pop();
+            s1.pop();
+        }
+    }
+    
+    int top() {
+        if(!s.empty())
+          return s.top();
+        return INT_MAX;
+    }
+    
+    int getMin() 
+    {
+       if(!s1.empty())
+          return s1.top();
+        return INT_MIN;
+    }
+};
+
+//Q7
+class Solution {
+public:
+    bool backspaceCompare(string s, string t) {
+        stack<char>s1,t1;
+        for(int i=0;i<s.size();i++)
+        {
+            if(s[i]!='#')
+                s1.push(s[i]);
+            else 
+            {
+                if(!s1.empty())
+                s1.pop();
+            }
+        }
+        for(int i=0;i<t.size();i++)
+        {
+            if(t[i]!='#')
+                t1.push(t[i]);
+            else 
+            {
+                if(!t1.empty())
+                t1.pop();
+            }
+        }
+        if(s1==t1)
+        return true;
+        return false;
+    }
+};
