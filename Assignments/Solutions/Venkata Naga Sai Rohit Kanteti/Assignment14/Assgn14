@@ -1,0 +1,107 @@
+1)
+int getCount(struct Node* head){
+    
+        //Code here
+        int len=0;
+        struct Node* p = head;
+        
+        while(p)
+        { 
+            len++;
+            p = p->next;
+        }
+    
+     return len;
+    
+    }
+---------------------------------------------------------
+2)
+ Node *insertAtBegining(Node *head, int x) {
+       // Your code here
+        Node *temp = new Node(x);
+        if(head == NULL)
+        {
+            head = temp;
+            return head;
+        }
+        temp->next = head;
+       // temp = head; (return temp)
+        return temp;
+    }
+    
+    
+    //Function to insert a node at the end of the linked list.
+    Node *insertAtEnd(Node *head, int x)  {
+       // Your code here
+       Node *temp = new Node(x);
+         if(head == NULL)
+       {
+           head = temp;
+           return head;
+       }
+       Node *curr = head;
+       while(curr->next != NULL)
+       {
+           curr = curr->next;
+       }
+       curr->next = temp;
+       temp->next = NULL;
+       return head;
+    }
+----------------------------------------------------------
+3)
+ //Your code here
+    Node* p = head;
+    if(x==1)
+    {
+        head = head->next;
+        free(p);
+        return head;
+    }
+    int t = x-1;
+    while(--t)
+    {
+        p=p->next;
+    }
+    Node* q = p->next;
+    p->next = p->next->next;
+    free(q);
+    return head;
+}
+-----------------------------------------------------------
+4)
+Node* insertInMiddle(Node* head, int x)
+{
+	// Cpde here
+	if(head==NULL){
+        return NULL;
+  }
+  Node *ptr=new Node(x);
+  Node *tor=head;
+  Node *hare=head->next;
+  
+  while(hare && hare->next){
+      hare=hare->next->next;
+      tor=tor->next;
+  }
+  
+  ptr->next=tor->next;
+
+  tor->next=ptr;
+  return head;
+}
+----------------------------------------------------------
+5)
+bool areIdentical(struct Node *head1, struct Node *head2)
+{
+    // Code here
+ if(head1==NULL && head2==NULL)
+    return true;
+ if(head1!=NULL and head2==NULL)
+    return false;
+ if(head1==NULL and head2!=NULL)
+    return false;
+ if(head1!=NULL && head2!=NULL){
+     return (head1->data==head2->data) && areIdentical(head1->next,head2->next);
+}
+------------------------------------------------------------------------------------

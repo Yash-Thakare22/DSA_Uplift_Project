@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+void leader(int a[],int n){
+    for(int i=0;i<n;i++){
+        int flag=1;
+        for(int j=i+1;j<n;j++){
+            if(a[j]>a[i]){
+                flag=0;
+                break;
+            }
+        }
+        if(flag==1)
+        cout<<a[i]<<" ";
+    }
+    return;
+}
+int main() {
+    int n;cin>>n;int a[n];
+    for(int i=0;i<n;i++)
+        cin>>a[i];
+    leader(a,n);
+    return 0;
+}

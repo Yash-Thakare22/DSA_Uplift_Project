@@ -1,0 +1,28 @@
+'''
+
+Question 5
+
+Given an array arr[] of integers, find the first repeating element in it. We need to find the element that occurs more than once and whose index of first occurrence is smallest
+
+I/P:
+5 10 40 4 6 5 10
+
+O/P:
+5 (5 is the first element that repeats)
+
+'''
+n=int(input())
+array=[int(x) for x in input().split()]
+freq=dict()
+minidx=-1
+for i in range(n):
+    if array[i] in freq.keys():
+        minidx=i
+        break
+    else:
+        freq[array[i]]=1
+if minidx==-1:
+    print("No repeating element found.")
+else:
+    print("{} is the first element that repeats.".format(array[minidx]))
+    

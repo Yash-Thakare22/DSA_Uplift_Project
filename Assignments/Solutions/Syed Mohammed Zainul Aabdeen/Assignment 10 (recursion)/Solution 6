@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+void printPatternRow(int n)
+{
+    if (n < 1)
+        return;
+    cout << "* ";
+    printPatternRow(n-1);
+}
+void printPattern(int n)
+{
+    if (n < 1)
+        return;
+    printPatternRow(n);   
+    cout << endl;
+    printPattern(n-1);
+}
+int main()
+{
+    int n;
+    cin>>n;
+    printPattern(n);
+    return 0;
+}

@@ -1,0 +1,31 @@
+'''
+
+Question 4
+
+Given a string str, write program reverse words in a given string
+
+I/P:
+Do problem solving
+O/P:
+solving problem Do
+
+
+'''
+def ReverseString(s,l):
+    j=int(l/2)
+    if j%2==0:
+        while(j<l):
+            s[j],s[l-j-1]=s[l-j-1],s[j]
+            j+=1
+    else:
+        j+=1
+        while(j<l):
+            s[j],s[l-j-1]=s[l-j-1],s[j]
+            j+=1
+    return s
+
+s=str(input())
+s=s.split(' ')
+s=ReverseString(s,len(s))
+for i in s:
+    print(i,end=" ")

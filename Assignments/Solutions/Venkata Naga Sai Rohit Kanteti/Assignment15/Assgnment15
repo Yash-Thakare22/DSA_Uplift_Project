@@ -1,0 +1,263 @@
+1)
+ bool isValid(string s) {
+        stack<char> checks;
+        for (char c : s) {
+            switch (c) {
+                case '(':
+                case '{': 
+                case '[': checks.push(c); break;
+                case ')': if (checks.empty() || checks.top()!='(') return false; else checks.pop(); break;
+                case '}': if (checks.empty() || checks.top()!='{') return false; else checks.pop(); break;
+                case ']': if (checks.empty() || checks.top()!='[') return false; else checks.pop(); break;
+                default: ; // pass
+            }
+        } 
+        return checks.empty();
+        
+    
+    }
+-----------------------------------------------------------------------------------------------------------------------
+2)
+ ListNode* temp;
+    
+    bool check(ListNode* p) {
+        if (NULL == p) return true;
+        bool flag = check(p->next) & (temp->val == p->val);
+        temp = temp->next;
+        return flag;
+    }
+    
+    bool isPalindrome(ListNode* head) {
+        temp = head;
+        return check(head);
+    }
+-----------------------------------------------------------------------------------------------------
+3)
+class Solution {
+public:
+    int find(vector<int>& v,int ele)
+    {
+        for(int i=0;i<v.size();i++)
+        {
+            if(v[i]==ele) return i;
+        }
+        
+        return -1;
+    }
+    
+    int findGreater(vector<int>& nums2,int eleInd)
+    {
+        for(int i=eleInd+1;i< nums2.size();i++)
+        {
+            if(nums2[eleInd] <nums2[i])
+            {
+                return nums2[i];
+            }
+        }
+        return -1;
+    }
+    vector<int> nextGreaterElement(vector<int>& nums1, vector<int>& nums2) {
+        vector<int> ans;
+        for(int i=0;i<nums1.size();i++)
+        {
+            int ind = find(nums2,nums1[i]);
+            ans.push_back(findGreater(nums2,ind));
+        }
+        return ans;
+    }
+};
+-------------------------------------------------------------------------------
+4)
+class MyQueue {
+    stack<int> s1, s2;
+public: 
+    /** Initialize your data structure here. */
+    MyQueue() {
+       
+    }
+    /** Push element x to the back of queue. */
+    void push(int x) {
+        s1.push(x);
+    }
+    
+    /** Removes the element from in front of queue and returns that element. */
+    int pop() {
+        if (s2.empty()){
+            while (!s1.empty()){
+                s2.push(s1.top());
+                s1.pop();
+            }
+        }
+        int num = s2.top();
+        s2.pop();
+        return num;
+    }
+    
+    /** Get the front element. */
+    int peek() {
+        if (s2.empty()){
+            while (!s1.empty()){
+                s2.push(s1.top());
+                s1.pop();
+            }
+        }
+        return s2.top();
+    }
+    
+    /** Returns whether the queue is empty. */
+    bool empty() {
+        return s1.empty() && s2.empty();
+    }
+};
+​
+/**
+ * Your MyQueue object will be instantiated and called as such:
+ * MyQueue* obj = new MyQueue();
+ * obj->push(x);
+ * int param_2 = obj->pop();
+ * int param_3 = obj->peek();
+ * bool param_4 = obj->empty();
+ */
+------------------------------------------------------------------------------
+5)
+class MyStack {
+public:
+    /** Initialize your data structure here. */
+    MyStack() {
+
+    }
+
+    /** Push element x onto stack. */
+    void push(int x) {
+        queue<int> temp_queue;  // Create a temporary queue
+        temp_queue.push(x);  // First push the new element into the temporary queue
+        while (!_data.empty()){  // _data.empty() returns TRUE if it is empty, or NULL if it is not empty
+            temp_queue.push(_data.front());  // Import the original data queue elements into the temporary queue
+            _data.pop();
+        }
+        while (!temp_queue.empty()){
+            _data.push(temp_queue.front());  // Import the temporary queue elements into the original data queue
+            temp_queue.pop();
+        }
+    }
+
+    /** Removes the element on top of the stack and returns that element. */
+    int pop() {
+        int x = _data.front();
+        _data.pop();
+        return x;
+    }
+
+    /** Get the top element. */
+    int top() {
+        return _data.front();
+    }
+
+    /** Returns whether the stack is empty. */
+    bool empty() {
+        return _data.empty();
+    }
+
+private:
+    queue<int> _data;  // Make it private
+};
+
+/**
+ * Your MyStack object will be instantiated and called as such:
+ * MyStack* obj = new MyStack();
+ * obj->push(x);
+ * int param_2 = obj->pop();
+ * int param_3 = obj->top();
+ * bool param_4 = obj->empty();
+ */
+------------------------------------------------------------------------
+6)
+class MinStack {
+private:
+    stack<int> stk;
+    stack<int> min;
+public:
+    /** initialize your data structure here. */
+    MinStack() {
+        
+    }
+    
+    void push(int x) {
+        stk.push(x);
+        if(min.empty() || min.top()>=x) 
+            min.push(x);
+    }
+    
+    void pop() {
+        if(stk.top()==min.top()) {
+            min.pop();
+            stk.pop();
+        }
+        else 
+            stk.pop();
+    }
+    
+    int top() {
+        if(!stk.empty())
+            return stk.top();
+        else
+            return NULL;
+    }
+    
+    int getMin() {
+        if(!stk.empty())
+            return min.top();
+        else
+            return NULL;
+    }
+};
+---------------------------------------------------------------------
+7)
+class Solution {
+public:
+    bool backspaceCompare(string s, string t) {
+        int k=0,p=0;
+        for(int i=0;i<s.size();i++)
+        {
+            if(s[i]=='#')
+            {
+                k--;
+                 k=max(0,k);
+            }
+            
+           else
+           {
+               s[k]=s[i];
+               k++;
+           }
+        }
+        for(int i=0;i<t.size();i++)
+        {
+            if(t[i]=='#')
+            {
+                p--;
+                 p=max(0,p);
+            }
+            
+           else
+           {
+               t[p]=t[i];
+               p++;
+           }
+        }
+        if(k!=p)
+            return false;
+        else
+        {
+            for(int i=0;i<k;i++)
+            {
+                if(s[i]!=t[i])
+                    return false;
+            }
+            return true;
+        }
+        
+    }
+};
+
+

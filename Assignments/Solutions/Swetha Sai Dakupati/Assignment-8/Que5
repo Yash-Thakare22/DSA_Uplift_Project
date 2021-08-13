@@ -1,0 +1,51 @@
+ /* 
+  GEEKSFORGEEKS QUESTIONS ON TOPICS COVERED TILL NOW 
+									    (REVISION)
+                      
+	PATTERN          : https://practice.geeksforgeeks.org/problems/triangle-shrinking-downwards0459/1
+  
+  */
+  
+// { Driver Code Starts
+#include <bits/stdc++.h>
+#include<string>
+using namespace std;
+
+ // } Driver Code Ends
+class Solution {
+  public:
+    string triDownwards(string S) {
+        // code here
+        int l=S.length();
+        string s;
+        int i,j;
+        for(i=0;i<l;i++){
+            for(j=0;j<i;j++) s+='.';
+            for(j=i;j<l;j++) s+=S[j];
+        }
+        return s;
+    }
+};
+
+// { Driver Code Starts.
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        string S;
+        
+        cin >> S;
+
+        Solution ob;
+        string ans=ob.triDownwards(S);
+        
+        for(int i=0 ; i<ans.length() ; i++)
+        {
+            cout<<ans[i];
+            if((i+1)%S.length()==0)
+                cout<<endl;
+        }
+        
+    }
+    return 0;
+}  // } Driver Code Ends
