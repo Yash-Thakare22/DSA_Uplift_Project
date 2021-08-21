@@ -1,0 +1,15 @@
+/*
+https://www.interviewbit.com/problems/min-xor-value/
+*/
+
+int Solution::findMinXor(vector<int> &A) {
+    int n=A.size();
+    sort(A.begin(),A.end());
+    int minxor=INT_MAX;
+    int xorval=0;
+    for(int i=0;i<n-1;i++){
+     xorval=A[i]^A[i+1];
+        minxor=min(xorval,minxor);
+    }
+    return minxor;
+}

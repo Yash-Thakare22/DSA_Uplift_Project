@@ -1,0 +1,12 @@
+# https://www.interviewbit.com/problems/excel-column-number/
+
+class Solution:
+	# @param A : string
+	# @return an integer
+	def titleToNumber(self, A):
+		colnum=0
+		l=len(A)
+		for a in range(l) :
+			colnum*=26
+			colnum+=ord(A[a])-ord('A')+1
+		return colnum
