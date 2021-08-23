@@ -1,0 +1,15 @@
+# https://www.interviewbit.com/problems/min-steps-in-infinite-grid/
+
+class Solution:
+	# @param A : list of integers
+	# @param B : list of integers
+	# @return an integer
+	def coverPoints(self, A, B):
+		cnt=0
+		a=0
+		b=0
+		for i in range(len(A)-1):
+			a=abs(A[i+1]-A[i])
+			b=abs(B[i+1]-B[i])
+			cnt+=max(a,b)
+		return cnt
