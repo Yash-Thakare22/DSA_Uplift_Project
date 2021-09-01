@@ -24,8 +24,8 @@ Step :two:: Goto assignments folder.</br>
 Step :three:: Goto problems folder.</br>
 Step :four:: Then goto solutions folder.</br>
 Step :five:: Inside you name folder, create a folder by name of Assignment No.</br>
-Step :six:: Create a file inside the folder you created in step 4.</br>
-Step :seven:: Copy and Paste the code you have written, in file created in step 5.</br>
+Step :six:: Create a file inside the folder you created in step 5.</br>
+Step :seven:: Copy and Paste the code you have written, in file created in step 6.</br>
 Step :eight:: Then create a pull request.</br>
 </br>
 
