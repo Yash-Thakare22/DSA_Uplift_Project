@@ -1,0 +1,171 @@
+//Q1
+
+class Solution {
+public:
+    bool helper(TreeNode* l,TreeNode* r)
+    {
+        if(!l && !r)return true;
+        if((!l && r)|| (l && !r))
+            return false;
+        return (l->val == r->val) && helper(l->left,r->right) && helper(l->right , r->left);
+        
+    }
+    bool isSymmetric(TreeNode* root) {
+        return helper(root->left,root->right);
+    }
+};
+
+//Q2
+
+class Solution {
+public:
+    vector<vector<int>>r;
+
+    void bfs(TreeNode* root)
+    {    
+        if(!root) return;
+        
+        queue<TreeNode*> q;
+        q.push(root);
+        while(!q.empty())
+        {
+            int len = q.size();
+            vector<int> temp;
+            
+            for(int i=0;i<len;i++)
+            {
+                TreeNode* curr = q.front();
+                q.pop();
+                temp.push_back(curr->val);
+                if(curr->left) q.push(curr->left);
+                if(curr->right) q.push(curr->right);
+            }
+            
+            r.push_back(temp);
+        }
+    }
+    
+    vector<vector<int>> levelOrder(TreeNode* root) {
+        
+        bfs(root);
+        return r;       
+    }
+};
+
+
+//Q3
+
+class Solution {
+public:
+    int maxDepth(TreeNode* root) {
+        if(!root)return 0;
+        queue<TreeNode*>q;
+        q.push(root);
+        int count=0;
+        while(!q.empty())
+        {
+            count++;
+          int s=q.size();
+           for(int i=0;i<s;i++)
+           {
+               TreeNode*temp=q.front(); 
+               q.pop();
+               if(temp->left)q.push(temp->left);
+               if(temp->right)q.push(temp->right);
+           }
+            
+        }
+        return count;
+    }
+ };
+
+//using recursion
+ class Solution {
+public:
+    int maxDepth(TreeNode* root) {
+        if(root==NULL)
+            return 0;
+        return max(maxDepth(root->left),maxDepth(root->right))+1;
+    }
+};
+ 
+ //Q4
+ 
+ 
+ class Solution {
+public:
+    int min(TreeNode* root){
+        while(root -> left != NULL)
+            root = root -> left;
+        return root -> val;
+    }
+    
+    TreeNode* deletenodefound(TreeNode* root){
+        if(root -> left == NULL and root -> right == NULL)
+            return NULL;
+        if(root -> left == NULL and root -> right != NULL)
+            return root -> right;
+        if(root -> left != NULL and root -> right == NULL)
+            return root -> left;
+        int temp = min(root -> right);
+        root -> val = temp;
+        root -> right = deleteNode(root -> right, temp);
+        return root;
+    }
+    
+    TreeNode* deleteNode(TreeNode* root, int key) {
+        if(root == NULL)
+            return NULL;
+        if(root -> val > key)
+            root -> left = deleteNode(root -> left, key);
+        else if(root -> val < key)
+            root -> right = deleteNode(root -> right, key);
+        else 
+            root = deletenodefound(root);
+        return root;
+    }
+};
+
+
+
+//Q5
+
+
+class Solution {
+public:
+    int m;
+    int c=0;
+    void inorder(TreeNode*root, int k)
+    {
+        if(!root)return;
+        
+        inorder(root->left,k);
+        c++;
+        if(c==k){
+             m=root->val;
+            return;       
+        }
+        inorder(root->right,k);
+    }
+    
+    int kthSmallest(TreeNode* root, int k) {
+        
+       inorder(root,k);
+        return m;
+    }
+};
+
+//Q6
+
+class Solution {
+public:
+    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
+        
+         if(p->val <root->val  && q->val <root->val)
+            return lowestCommonAncestor(root->left,p,q);
+         else if(p->val >root->val && q->val >root->val)
+            return lowestCommonAncestor(root->right,p,q);
+        else
+            return root;
+    }
+};
