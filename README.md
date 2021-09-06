@@ -24,14 +24,14 @@ Step :two:: Goto assignments folder.</br>
 Step :three:: Goto problems folder.</br>
 Step :four:: Then goto solutions folder.</br>
 Step :five:: Inside you name folder, create a folder by name of Assignment No.</br>
-Step :six:: Create a file inside the folder you created in step 4.</br>
-Step :seven:: Copy and Paste the code you have written, in file created in step 5.</br>
+Step :six:: Create a file inside the folder you created in step 5.</br>
+Step :seven:: Copy and Paste the code you have written, in file created in step 6.</br>
 Step :eight:: Then create a pull request.</br>
 </br>
 
 <h3> Note: The file name should be Question_No. and create a separate file for each question.</h3> <br>
 
-<h2 align="center"> Platforms to practice :dart: </h2>
+<h2 align="center"> Platforms To Practice :dart: </h2>
 
 :diamonds: https://www.codechef.com/
  
@@ -58,6 +58,8 @@ Step :eight:: Then create a pull request.</br>
 :diamonds: https://cp-algorithms.com/
 
 :diamonds: https://www.pepcoding.com/most-important-interview-questions-list-for-product-based-companies
+
+:diamonds: https://docs.google.com/spreadsheets/u/0/d/1-wKcV99KtO91dXdPkwmXGTdtyxAfk1mbPXQg81R9sFE/htmlview
 
 <h2 align="center"> Online Coding Competitions :heavy_check_mark: </h2>
 
