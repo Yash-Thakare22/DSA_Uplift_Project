@@ -1,0 +1,16 @@
+// https://www.interviewbit.com/problems/interview-questions/
+
+class Solution:
+	# @param A : list of integers
+	# @return an integer
+	def bulbs(self, A):
+        cnt=0
+        c=0
+        for a in A:
+            if a==c:
+                cnt+=1
+                if c==0:
+                    c=1
+                else:
+                    c=0
+        return cnt
