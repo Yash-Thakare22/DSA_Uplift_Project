@@ -88,7 +88,7 @@ int main()
     return 0;
 }
 
-Time complexity - O(n*sqrt(n))
+Time complexity - O(n*log(log((n)))
 
 
 Check if a large number is divisible by 3 or not 
