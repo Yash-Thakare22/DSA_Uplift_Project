@@ -1,0 +1,29 @@
+// https://www.interviewbit.com/problems/meeting-rooms/
+
+int Solution::solve(vector<vector<int> > &A) {
+    sort(A.begin(),A.end());
+    /*for(int i=0;i<A.size();i++){
+        for(int j=0;j<2;j++){
+            cout<<A[i][j]<<" ";
+        }
+        cout<<endl;
+    }*/
+    vector<int>rooms;
+    for(int i=0;i<A.size();i++){
+        int j=0,c=0;
+        while(j<rooms.size()){
+            if(rooms[j]<=A[i][0]){
+                rooms[j]=A[i][1];
+                c=1;
+                break;
+            }
+            j++;
+        }
+        if(c==0){
+            rooms.push_back(A[i][1]);
+        }
+
+    }
+    return rooms.size();
+}
+
