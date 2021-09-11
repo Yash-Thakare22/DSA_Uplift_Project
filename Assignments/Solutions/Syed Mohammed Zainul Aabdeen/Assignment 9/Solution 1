@@ -1,0 +1,20 @@
+#include <iostream>
+#include<vector>
+using namespace std;
+int main() {
+    //{a,b,c,x,y,z};
+    //{a,x,b,y,c,z};
+    int n;cin>>n;
+    vector <int> nums,v;
+    for(int i=0;i<2*n;i++){
+        int a;
+        cin>>a;
+        v.push_back(a);
+    }
+    for(int i=0;i<n;i++){
+            nums.push_back(v[i]);
+            nums.push_back(v[n+i]);
+    }
+    for(int i=0;i<2*n;i++)    cout<<nums[i]<<" ";
+    return 0;
+}

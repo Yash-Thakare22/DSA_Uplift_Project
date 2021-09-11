@@ -1,0 +1,148 @@
+#include <iostream>
+
+using namespace std;
+
+void SwapStrings (string str1,string str2) {
+    string t = str1;
+    str1 = str2;
+    str2 = t;
+    cout << str1 << " " << str2;
+}
+
+int main() {
+    string str1, str2;
+    cout << "Enter two strings :";
+    cin >> str1 >> str2;
+    cout << endl;
+
+    SwapStrings(str1, str2);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+///////////////////////////////////// 2nd
+
+
+
+
+
+
+
+
+
+#include <iostream>
+#include <string>
+#include <bits/stdc++.h>
+
+using namespace std;
+
+void RemoveCharacters (string str1, string str2) {
+
+    for (int i = 0; i < str1.length() ; i++) {
+        for (int j = 0; j < str2.length() ; j++) {
+            if (str1[i] == str2[j]) {
+                str1[i] = ' ';
+            }
+        }
+    }
+    for(int i = 0; i < str1.length(); i++){
+        if (str1[i] == ' ')
+            continue;
+        else
+            cout << str1[i];
+
+    }
+}
+
+int main() {
+    string str1, str2;
+    cout << "Enter two string :";
+    cin >> str1 >> str2;
+    cout << endl;
+
+    cout << " ";
+    RemoveCharacters(str1, str2);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////3rd
+
+
+
+
+
+
+#include <iostream>
+#include <string>
+#include <bits/stdc++.h>
+
+using namespace std;
+
+bool IsAnagram (string str1, string str2) {
+
+    if (str1.length() != str2.length())
+        return false;
+
+    else {
+
+        for (int i = 0; i < str1.length(); i++) {
+
+            int x = str1[i];
+            int c1 = 0, c2 = 0;
+
+            for (int j = 0; j < str1.length(); j++) {
+                if (x == str1[j])
+                    c1++;
+            }
+
+            for (int j = 0; j < str2.length(); j++) {
+                if (x == str2[j])
+                    c2++;
+            }
+
+            if(c1 != c2)
+                return false;
+
+        }
+        return true;
+
+    }
+
+}
+
+int main() {
+    string str1, str2;
+    cout << "Enter two string :";
+    cin >> str1 >> str2;
+    cout << endl;
+
+    if (IsAnagram(str1, str2))
+        cout << "Yes. Two strings are anagram of each other." << endl;
+
+    else
+        cout << "No. Two strings are not anagram of each other." << endl;
+
+    return 0;}
+    
+    
+    
+    

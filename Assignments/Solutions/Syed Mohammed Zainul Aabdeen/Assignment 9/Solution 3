@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+int main() {
+    //bdca-1 3 2 0
+    //abcd-0 1 2 3 //sorted
+    string s;
+    cin>>s;
+    int n=s.size();
+    int a[n];
+    for(int i=0;i<n;i++){
+        cin>>a[i];
+    }
+    for(int i=0;i<n;i++){
+        for(int j=i+1;j<n;j++){
+            if(a[j]<a[i]){
+                swap(a[i],a[j]);
+                swap(s[i],s[j]);
+            }
+        }
+    }
+    for(int i=0;i<n;i++)
+        cout<<s[a[i]];
+    return 0;
+}

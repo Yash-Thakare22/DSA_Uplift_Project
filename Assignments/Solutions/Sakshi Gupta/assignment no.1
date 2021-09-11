@@ -1,0 +1,292 @@
+Question No.1
+
+#include <stdio.h>
+
+int main()
+{
+    int r,c;
+    scanf("%d %d", &r, &c);
+    
+    for(int i = 0; i<r; i++)
+    {
+        for(int j = 0; j<r-i; j++)
+        {
+            printf(" ");
+            
+        }
+        for(int j = 0; j<c; j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+/*******************************************************************************************************************************************************************************/
+
+
+Question No.2
+
+#include <stdio.h>
+int main()
+{
+    
+    int flag=0;
+    for(int i=1;i<=5;i++)                   
+    {
+        for(int j=5;j>=i;j--)               
+        {
+            printf("* ");
+        }
+        for(int k=1;k<=i-1;k++)             
+        {
+            printf("  ");
+        }
+        for(int y=1;y<=i-1;y++)
+        {
+          printf("  ");
+        }
+        for(int j=5;j>=i;j--)
+        {
+            printf("* ");
+        }
+        printf("\n");
+    }
+    for(int i=1;i<=5;i++)             
+    {
+        for(int j=1;j<=i;j++)
+        {
+            printf("* ");
+        }
+        for(int k=4;k>=i;k--)
+        {
+            printf("  ");
+        }
+        for(int j=4;j>=i;j--)
+        { 
+            printf("  ");
+        }
+        for(int y=1;y<=i;y++)
+        {
+            printf("* ");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+/*******************************************************************************************************************************************************************************/
+
+
+Question no.3
+
+#include <stdio.h>
+
+int main()
+{
+    int h=1,n;
+    scanf("%dd", &n);
+    for(int i=0; i<n; i++)
+    {
+        for(int j = 0; j<=i; j++)
+        {
+            printf("%d", h);
+            h++;
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+/******************************************************************************************************************************************************************************/
+
+
+Question no.4
+
+#include <stdio.h>
+int main()
+{
+    for(int i=1; i<=3; i++)
+    {
+        for(int j=2; j>=i; j--)
+        {
+            printf(" ");
+        }
+        for(int j=1; j<=i; j++)
+        {
+            printf(" * ");
+        }
+        printf("\n");
+    }
+    for(int i=1; i<=2; i++)
+    {
+        for(int j=1;j<=i;j++)
+        {
+            printf(" ");
+        }
+        for(int j=2;j>=i;j--)
+        {
+            printf(" * ");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+/******************************************************************************************************************************************************************************/
+
+
+Question no.5
+
+#include <stdio.h>
+
+int main()
+{
+    for(int i=1;i<=3;i++)
+    {
+        int o=i;
+        for(int j=1;j<=i;j++)
+        {
+            printf(" ");
+        }
+        for(int k=2;k>=i;k--)
+        {
+            printf("  ");
+        }
+        for(int y=3;y>=i;y--)
+        {
+            printf("  ");
+        }
+        for(int t=1;t<=i;t++)
+        {
+            printf("%d", o);
+            o--;
+        }
+        printf("\n");
+    }
+    int mid=4;
+    for(int i=1;i<=7;i++)
+    {
+        if(i<=mid)
+        {
+            printf("%d", i);
+        }
+        else 
+        {
+            printf("%d", mid);
+        }
+    }
+    return 0;
+}
+
+
+/*******************************************************************************************************************************************************************************/
+
+Question no.6
+
+#include <stdio.h>
+
+int main()
+{
+    for(int i=1;i<=5;i++)
+    {
+        for(int j=5;j>=i;j--)
+        {
+            printf("%d", j);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+
+/*******************************************************************************************************************************************************************************/
+
+
+Question no.7
+
+
+#include <stdio.h>
+
+int main()
+{
+    
+    for(int i=1;i<=6;i++)
+    {
+        int coeff=1;
+        for(int j=1;j<=i;j++)
+        {
+            printf("%d", coeff);
+            coeff=coeff*(i-j)/j;
+        }
+       printf("\n");
+    }
+    return 0;
+}
+
+/*******************************************************************************************************************************************************************************/
+
+
+Question no.8
+
+#include <stdio.h>
+
+
+bool is_prime(int);
+
+int main()
+{
+    int h=5;
+    for(int i=1;i<=5;i++)
+    {
+        for(int k=1;k<=i;k++)          // for spaces
+        {
+            if(i==1 || i==2)
+            {
+                break;
+            }
+            else
+            {
+                printf(" ");
+            }
+        }
+        if(is_prime(h) || h==1)             //since * is printed prime number of times: 5,3,2
+        {                                   //checking for whether the number is prime or not.
+            for(int j=h;j>=1;j--)
+            {
+                printf(" * ");
+            }
+            printf("\n");
+        }
+        h--;
+    }
+
+    return 0;
+}
+
+bool is_prime(int r)                //function to check if r is prime or not.
+{
+    int flag=0;
+    for(int i=2;i<=r/2;i++)
+    {
+        if(r%i==0)
+        {
+            flag=1;
+            break;
+        }
+    }
+    if(flag==1)
+    {
+        return false;
+    }
+    else 
+    {
+        return true;
+    }
+}
+
+
+/******************************************************************************************************************************************************************************/

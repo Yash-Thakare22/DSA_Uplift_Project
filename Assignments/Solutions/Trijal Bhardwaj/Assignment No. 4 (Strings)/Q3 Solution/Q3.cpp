@@ -1,0 +1,36 @@
+/*
+Question 3
+Given two strings, removes the characters from the first string which are present in the second string
+I/P :
+str1="leetcode" , str2="let"
+O/P :
+cod
+*/
+
+#include <iostream>
+#include<string.h>
+using namespace std;
+int main() {
+    string str1, str2;
+    cout << "Enter First String : ";
+    getline(cin, str1);
+    cout << "\nEnter Second String : ";
+    getline(cin, str2);
+    int n = str1.length();
+    int m = str2.length();
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            if (str1[i] == str2[j])
+                str1[i] = ' ';
+        }
+    }
+    cout << "\nFirst String After Removing Those Characters From It Which Were Present in Second String : ";
+    for (int i = 0; i < n; i++) {
+        if (str1[i] == ' ')
+            continue;
+        else
+            cout << str1[i];
+    }
+    cout << endl;
+    return 0;
+}

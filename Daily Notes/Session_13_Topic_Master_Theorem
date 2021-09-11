@@ -1,0 +1,28 @@
+https://www.programiz.com/dsa/master-theorem
+
+
+Time complexity Analysis: 
+
+1)Fibonacci Series using Recursion
+
+#include<stdio.h>
+int fib(int n)
+{
+   if (n <= 1)
+      return n;
+   return fib(n-1) + fib(n-2);
+} 
+int main ()
+{
+  int n = 9;
+  printf("%d", fib(n));
+  getchar();
+  return 0;
+}
+
+The recursive function for above program can be defined as, T(n) = T(n-1) + T(n-2) 
+
+
+2) Binary Search – T(n) = T(n/2) + O(1) 
+
+3) Merge Sort – T(n) = 2T(n/2) + O(n) 

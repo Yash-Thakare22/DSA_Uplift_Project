@@ -1,0 +1,202 @@
+// https://practice.geeksforgeeks.org/problems/number-is-sparse-or-not-1587115620/1/?track=DSASP-BitMagic&batchId=154#
+class Solution
+{
+public:
+
+    bool isSparse(int n)
+    {
+        
+        return !(n & (n >> 1));
+    }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// https://practice.geeksforgeeks.org/problems/equilibrium-point-1587115620/1/?track=DSASP-Arrays&batchId=154#
+class Solution
+{
+public:
+    // Function to find equilibrium point in the array.
+    // a: input array
+    // n: size of array
+    int equilibriumPoint(long long a[], int n)
+    {
+
+        // Your code here
+        int s = 0, sum = 0;
+        for (int i = 0; i < n; i++)
+            s += a[i];
+        for (int i = 0; i < n; i++)
+        {
+            if (sum == (s - a[i]) * 0.5)
+                return i + 1;
+            if (sum > (s - a[i]) * 0.5)
+                return -1;
+            sum += a[i];
+        }
+    }
+};
+
+
+
+
+
+
+
+
+
+
+
+// https://practice.geeksforgeeks.org/problems/leaders-in-an-array-1587115620/1/?track=DSASP-Arrays&batchId=154#
+class Solution
+{
+    //Function to find the leaders in the array.
+public:
+    vector<int> leaders(int a[], int n)
+    {
+        // Code here
+        vector<int> v;
+        int m = INT_MIN;
+        for (int i = n - 1; i >= 0; i--)
+        {
+            if (a[i] >= m)
+            {
+                m = a[i];
+                v.push_back(a[i]);
+            }
+        }
+        reverse(v.begin(), v.end());
+        return v;
+    }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// https://practice.geeksforgeeks.org/problems/distinct-pattern-search-1587115620/1/?track=DSASP-Strings&batchId=154#
+class Solution
+{
+public:
+    //Function to check if the given pattern exists in the given string or not.
+    bool search(string pat, string txt)
+    {
+        // Your code here
+        return (txt.find(pat) == -1) ? 0 : 1;
+    }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// https://practice.geeksforgeeks.org/problems/transpose-of-matrix-1587115621/1/?track=DSASP-Matrix&batchId=154#
+class Solution
+{
+public:
+    //Function to find transpose of a matrix.
+    void transpose(vector<vector<int>> &matrix, int n)
+    {
+        // code here
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = i; j < n; j++)
+            {
+                swap(matrix[i][j], matrix[j][i]);
+            }
+        }
+    }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// https://practice.geeksforgeeks.org/problems/sum-of-upper-and-lower-triangles-1587115621/1/?track=DSASP-Matrix&batchId=154#
+class Solution
+{   
+    public:
+    //Function to return sum of upper and lower triangles of a matrix.
+    vector<int> sumTriangles(const vector<vector<int> >& matrix, int n)
+    {
+        // code here
+        int s1=0,s2=0;
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                if(i<=j) s1+=matrix[i][j];
+                if(i>=j) s2+=matrix[i][j];
+            }
+        } vector<int>s ={s1,s2};
+        return s;
+    }
+}; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

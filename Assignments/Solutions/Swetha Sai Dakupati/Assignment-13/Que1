@@ -1,0 +1,12 @@
+# https://leetcode.com/problems/two-sum/
+
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        l=len(nums)
+        d=dict()
+        for i in range(0,l):
+            complement=target-nums[i]
+            if complement in d:
+                return [d[complement],i]
+            d[nums[i]]=i
+        

@@ -1,0 +1,17 @@
+// https://www.interviewbit.com/problems/highest-product/
+
+int Solution::maxp3(vector<int> &A) {
+    sort(A.begin(),A.end());
+    int prod=1,product=1;
+    int l=A.size();
+    for(int i=0;i<3;i++)
+        prod*=A[l-i-1];
+    for(int i=0;i<2;i++)
+        product*=A[i];
+    product*=A[l-1];
+    if(prod>product)
+        return prod;
+    else 
+    return product;
+}
+

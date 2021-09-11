@@ -1,0 +1,20 @@
+https://practice.geeksforgeeks.org/problems/remove-spaces0128/1#
+
+
+
+class Solution
+{
+  public:
+    string modify (string s)
+    {
+        //code here.
+        string s1="";
+        
+        for(int i=0;i<s.size();i++)
+        {
+            if(s[i]!=' ')
+            s1+=s[i];
+        }
+        return s1;
+    }
+};

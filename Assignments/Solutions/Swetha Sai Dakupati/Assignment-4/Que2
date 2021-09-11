@@ -1,0 +1,37 @@
+/******************************************************************************
+
+
+Question 2
+
+Given a string str, the task is to remove all the duplicates in the given string
+
+I/P:
+aababcdd
+O/P:
+abcd
+
+*******************************************************************************/
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+int
+main ()
+{
+  char str[1000];
+  cin >> str;
+  int i, j;
+  j = 0;
+  int array[256] = { 0 };
+  int l = strlen (str);
+  for (i = 0; i < l; i++)
+    {
+      int idx = int (str[i]);
+      if (array[idx] == 0)
+	str[j++] = str[i];
+      array[idx] += 1;
+    }
+  str[j++] = '\0';
+  cout << str << endl;
+  return 0;
+}

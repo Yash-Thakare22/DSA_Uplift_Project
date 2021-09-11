@@ -1,0 +1,198 @@
+//   https://practice.geeksforgeeks.org/problems/count-nodes-of-linked-list/1/?track=DSASP-LinkedList&batchId=154
+class Solution
+{
+public:
+    //Function to count nodes of a linked list.
+    int getCount(struct Node *head)
+    {
+        int count = 0;
+
+        while (head != NULL)
+        {
+            count++;
+            head = head->next;
+        }
+        return count;
+
+        //Code here
+    }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+//  https://practice.geeksforgeeks.org/problems/linked-list-insertion-1587115620/1/?track=DSASP-LinkedList&batchId=154
+class Solution
+{
+public:
+    //Function to insert a node at the beginning of the linked list.
+    Node *insertAtBegining(Node *head, int x)
+    {
+        Node *n = new Node(x);
+        if (head == NULL)
+            return n;
+        n->next = head;
+        head = n;
+        return head;
+        // Your code here
+    }
+
+    //Function to insert a node at the end of the linked list.
+    Node *insertAtEnd(Node *head, int x)
+    {
+        Node *n = new Node(x);
+        if (head == NULL)
+            return n;
+        Node *temp = head;
+        while (temp->next != NULL)
+        {
+            temp = temp->next;
+        }
+        temp->next = n;
+        return head;
+        // Your code here
+    }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//  https://practice.geeksforgeeks.org/problems/delete-a-node-in-single-linked-list/1
+Node *deleteNode(Node *head, int x)
+{
+    if (x == 1)
+    {
+        return head->next;
+    }
+
+    Node *curr = head->next, *prev = head;
+    int pos = 2;
+    while (curr != NULL)
+    {
+        if (pos == x)
+        {
+            prev->next = curr->next;
+
+            break;
+        }
+
+        pos++;
+        prev = curr;
+        curr = curr->next;
+    }
+
+    return head;
+    //Your code here
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//  https://practice.geeksforgeeks.org/problems/insert-in-middle-of-linked-list/1/?track=DSASP-LinkedList&batchId=154
+Node *insertInMiddle(Node *head, int x)
+{
+    // Cpde here
+
+    Node *tmp1 = new Node(x);
+    Node *tmp2 = head;
+    int len = 0;
+    while (tmp2 != NULL)
+    {
+        len++;
+        tmp2 = tmp2->next;
+    }
+    int c = ((len % 2) == 0) ? (len / 2) : (len + 1) / 2;
+    tmp2 = head;
+    while (c-- > 1)
+        tmp2 = tmp2->next;
+    tmp1->next = tmp2->next;
+    tmp2->next = tmp1;
+    return head;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//  https://practice.geeksforgeeks.org/problems/identical-linked-lists/1/?track=DSASP-LinkedList&batchId=154
+bool areIdentical(struct Node *head1, struct Node *head2)
+{
+    // Code here
+    while (head1 != NULL && head2 != NULL)
+    {
+        if (head1->data != head2->data)
+            return false;
+        head1 = head1->next;
+        head2 = head2->next;
+    }
+    return true;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
