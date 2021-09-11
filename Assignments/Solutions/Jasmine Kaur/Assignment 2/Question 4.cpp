@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
-int main(){
+int main()
+{
     int max=0;
     int n;
     cin>>n;
@@ -15,6 +16,6 @@ int main(){
               max = s;
         }
     } 
-  cout<<max;
+    cout<<max;
     return 0;
 }

@@ -1,7 +1,8 @@
 
 #include <iostream>
 using namespace std;
-int main(){
+int main()
+{
     int n=7;
     int a[n] = {5 ,10 ,40 ,4, 6, 5, 10};
     for(int i=0;i<n;i++){
