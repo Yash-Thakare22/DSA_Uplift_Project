@@ -1,0 +1,174 @@
+//Q1
+
+class Solution {
+  public:
+    // Function to return the adjacency list for each vertex.
+    vector<vector<int>> printGraph(int V, vector<int> adj[]) {
+       vector<vector<int>>r;
+       vector<int>arr;
+        for(int i=0;i<V;i++)
+        {
+            arr.push_back(i);
+            for(auto x:adj[i] )
+            {
+            arr.push_back(x);
+            }
+            r.push_back(arr);
+              arr.clear();
+        }
+        return r;
+    }
+};
+
+
+//Q2
+
+
+class Solution {
+  public:
+    // Function to return Breadth First Traversal of given graph.
+    vector<int> bfsOfGraph(int V, vector<int> adj[]) {
+        vector<int>r;
+        bool visited[V]={0};
+        queue<int>q;
+        q.push(0);
+        visited[0]=1;
+        while(!q.empty())
+        {
+            int f=q.front();
+            q.pop();
+            r.push_back(f);
+            for(auto x:adj[f])
+            {
+                if(visited[x]!=1)
+                {
+                    q.push(x);
+                    visited[x]=1;
+                }
+            }
+            
+        }
+        return r;
+    }
+};
+
+
+
+
+
+
+
+//Q3
+
+class Solution {
+public:
+    vector<int>r;
+    
+    void helper(vector<int>adj[],int V ,bool visited[])
+    {
+         for(auto i:adj[V])
+         {
+             if(!visited[i])
+             {
+                 r.push_back(i);
+                 visited[i]=1;
+                 helper(adj,i,visited);
+             }
+         }
+    }
+    vector<int> dfsOfGraph(int V, vector<int> adj[]) {
+       bool visited[V]={0};
+       visited[0]=1;
+       r.push_back(0);
+       helper(adj, 0,visited);
+       return r;
+    }
+};
+
+
+//Q4
+
+
+class Solution
+{
+    public:
+    int bfs(int V,vector<int> adj[],bool visited[],int s,int X){
+        queue<int> q;
+        q.push(s);
+        int i=0;
+        int ans=0;
+        while(q.empty()==false)
+        {
+          int count=q.size();
+          ans+=1;
+          for(i=0;i<count;i++)
+          {
+              int curr=q.front();
+              q.pop();
+              if(curr==X){
+                  return ans-1;
+              }
+              for(int x: adj[curr]){
+                  if(visited[x]==false){
+                      q.push(x);
+                      visited[x]=true;
+                  }
+              }
+          }
+          
+          i++;
+        }
+        return -1;
+    }
+    int nodeLevel(int V, vector<int> adj[], int X) 
+    {
+        bool visited[V]={false};
+        visited[0]=true;
+        int res=bfs(V,adj,visited,0,X);
+        return res;
+    
+    }
+};
+
+
+
+//Q5
+
+ void findIsland(vector<vector<char>> &grid, int x, int y, int r, int c){
+        if(x<0 || x>=r || y<0 || y>=c || grid[x][y]!='1')
+            return;
+        grid[x][y] = '2';
+        
+        findIsland(grid, x+1, y, r, c);
+        findIsland(grid, x+1, y+1, r, c);
+        findIsland(grid, x, y+1, r, c);
+        findIsland(grid, x+1, y-1, r, c); 
+        findIsland(grid, x-1, y, r, c);
+        findIsland(grid, x-1, y-1, r, c);
+        findIsland(grid, x, y-1, r, c);
+        findIsland(grid, x-1, y+1, r, c);
+    }
+    
+    public:
+    //Function to find the number of islands.
+    int numIslands(vector<vector<char>>& grid) 
+    {
+        int rows = grid.size();
+        if(rows==0){
+            return 0;
+        }
+        int cols = grid[0].size();
+        int noOfIslands = 0;
+        for(int i=0;i<rows;i++){
+            for(int j=0;j<cols;j++){
+                if(grid[i][j]=='1'){
+                    findIsland(grid, i, j, rows, cols);
+                    noOfIslands+=1;
+                }
+            }
+        }
+        return noOfIslands;
+    }
+
+
+        
