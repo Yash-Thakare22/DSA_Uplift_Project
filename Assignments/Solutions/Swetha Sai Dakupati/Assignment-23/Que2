@@ -1,0 +1,40 @@
+# https://practice.geeksforgeeks.org/problems/permutations-of-a-given-string2041/1
+
+#User function Template for python3
+
+class Solution:
+    def find_permutation(self, S):
+        # Code here
+        answer=""
+        l=[]
+        self.permute(S,answer,l)
+        l.sort()
+        return l
+    def permute(self,s, answer,l):
+        if (len(s) == 0):
+            l.append(answer)
+            return
+     
+        for i in range(len(s)):
+            ch = s[i]
+            left_substr = s[0:i]
+            right_substr = s[i + 1:]
+            rest = left_substr + right_substr
+            self.permute(rest, answer + ch,l)
+
+
+#{ 
+#  Driver Code Starts
+#Initial Template for Python 3
+
+
+if __name__ == '__main__':
+	t=int(input())
+	for i in range(t):
+		S=input()
+		ob = Solution()
+		ans = ob.find_permutation(S)
+		for i in ans:
+			print(i,end=" ")
+		print()
+# } Driver Code Ends
