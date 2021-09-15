@@ -1,9 +1,21 @@
-int Solution::sqrt(int A) {
-    if(A==0) return 0;
-    int s=1,e=A,ans;
-    while(s<=e){
-        int m = (s+e)/2;
-        if(m<=A/m) {s=m+1; ans=m;}
-        else e = m-1;
-    }return ans;
+int Solution::firstMissingPositive(vector<int> &A) {
+    int n = A.size();
+    int j = 0;
+    for (int i = 0; i < n; i++) {
+        if (A[i] <= 0) {
+            swap(A[i], A[j]);
+            j++;
+        }
+    }
+    for (int i = j; i < n; i++) {
+        if (abs(A[i]) + j - 1 >= 0 && abs(A[i]) + j - 1 < n) {
+            if (A[abs(A[i]) + j - 1] > 0)
+                A[abs(A[i]) + j - 1] = -A[abs(A[i]) + j - 1];
+        }
+    }
+    for (int i = j; i < n; i++) {
+        if (A[i] > 0)
+            return (i - j + 1);
+    }
+    return (n - j + 1);
 }
